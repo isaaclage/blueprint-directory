@@ -43,3 +43,10 @@ group :development, :test do
   gem 'spring'
 end
 
+group :production do
+  gem 'puma'
+#Can’t get this working.  What does this do?
+	
+  gem 'pg'
+  gem 'rails_12factor'
+end
