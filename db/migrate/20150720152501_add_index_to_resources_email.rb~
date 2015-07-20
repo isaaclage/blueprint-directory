@@ -1,0 +1,4 @@
+class AddIndexToResourcesEmail < ActiveRecord::Migration
+  def change
+  end
+end

@@ -306,3 +306,910 @@ Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:44:05', '2015-07-20 14:44:05', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:44:05', '2015-07-20 14:44:05', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:44:05', '2015-07-20 14:44:05', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:44:05', '2015-07-20 14:44:05', 298486374)
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:45:05', '2015-07-20 14:45:05', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:45:05', '2015-07-20 14:45:05', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:45:05', '2015-07-20 14:45:05', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:45:05', '2015-07-20 14:45:05', 298486374)
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 654ms (Views: 653.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-20 10:45:07 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:46:11', '2015-07-20 14:46:11', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:46:11', '2015-07-20 14:46:11', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:46:11', '2015-07-20 14:46:11', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:46:11', '2015-07-20 14:46:11', 298486374)
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-20 10:46:11 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 331ms (Views: 318.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:50:14', '2015-07-20 14:50:14', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:50:14', '2015-07-20 14:50:14', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:50:14', '2015-07-20 14:50:14', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:50:14', '2015-07-20 14:50:14', 298486374)
+  [1m[36m (43.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 659ms (Views: 658.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-20 10:50:15 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 36ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:51:40', '2015-07-20 14:51:40', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:51:40', '2015-07-20 14:51:40', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:51:40', '2015-07-20 14:51:40', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:51:40', '2015-07-20 14:51:40', 298486374)
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 270ms (Views: 269.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:53:12', '2015-07-20 14:53:12', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:53:12', '2015-07-20 14:53:12', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:53:12', '2015-07-20 14:53:12', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:53:12', '2015-07-20 14:53:12', 298486374)
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-20 10:53:12 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 298ms (Views: 284.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:55:01', '2015-07-20 14:55:01', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:55:01', '2015-07-20 14:55:01', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:55:01', '2015-07-20 14:55:01', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:55:01', '2015-07-20 14:55:01', 298486374)
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-20 10:55:01 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 295ms (Views: 283.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:59:15', '2015-07-20 14:59:15', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:59:15', '2015-07-20 14:59:15', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:59:15', '2015-07-20 14:59:15', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:59:15', '2015-07-20 14:59:15', 298486374)
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------
+ResourceTest: test_email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-20 10:59:15 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 325ms (Views: 307.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:00:26', '2015-07-20 15:00:26', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:00:26', '2015-07-20 15:00:26', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:00:26', '2015-07-20 15:00:26', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:00:26', '2015-07-20 15:00:26', 298486374)
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-20 11:00:26 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 307ms (Views: 296.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------
+ResourceTest: test_email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:09:24', '2015-07-20 15:09:24', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:09:24', '2015-07-20 15:09:24', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:09:25', '2015-07-20 15:09:25', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:09:25', '2015-07-20 15:09:25', 298486374)
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------
+ResourceTest: test_email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------
+ResourceTest: test_email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-20 11:09:25 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 643ms (Views: 611.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:18:09', '2015-07-20 15:18:09', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:18:09', '2015-07-20 15:18:09', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:18:09', '2015-07-20 15:18:09', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:18:09', '2015-07-20 15:18:09', 298486374)
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 667ms (Views: 666.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-20 11:18:10 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 39ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------
+ResourceTest: test_email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------
+ResourceTest: test_email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:20:07', '2015-07-20 15:20:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:20:07', '2015-07-20 15:20:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:20:07', '2015-07-20 15:20:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:20:07', '2015-07-20 15:20:07', 298486374)
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-20 11:20:08 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 317ms (Views: 303.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------
+ResourceTest: test_email_addresses_should_be_unique
+---------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'resource@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "resources" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Example Resource"], ["email", "resource@example.com"], ["created_at", "2015-07-20 15:20:08.474589"], ["updated_at", "2015-07-20 15:20:08.474589"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'resource@example.com' LIMIT 1[0m
+  [1m[35m (13.8ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE "resources"."email" = '  ' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'resource@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------
+ResourceTest: test_email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'resource@example.com' LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'RESOURCE@foo.COM' LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'A_US-ER@foo.bar.org' LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'first.last@foo.jp' LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'alic+bob@baz.cn' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------
+ResourceTest: test_email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'resource@example,com' LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'resource_at_foo.org' LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'resource.name@example.' LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'foo@bar_baz.com' LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'foo@bar+baz.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'resource@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'resource@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:22:42', '2015-07-20 15:22:42', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:22:42', '2015-07-20 15:22:42', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:22:42', '2015-07-20 15:22:42', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:22:42', '2015-07-20 15:22:42', 298486374)
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-20 11:22:42 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 326ms (Views: 314.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[36mResource Exists (26.3ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('  ') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------
+ResourceTest: test_email_addresses_should_be_unique
+---------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "resources" ("email", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "resource@example.com"], ["name", "Example Resource"], ["created_at", "2015-07-20 15:22:43.358183"], ["updated_at", "2015-07-20 15:22:43.358183"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('RESOURCE@EXAMPLE.COM') LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------
+ResourceTest: test_email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------
+  [1m[35mResource Exists (0.3ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example,com') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource_at_foo.org') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource.name@example.') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mResource Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------
+ResourceTest: test_email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('RESOURCE@foo.COM') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('A_US-ER@foo.bar.org') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('first.last@foo.jp') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('alic+bob@baz.cn') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (22.0ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (2.5ms)[0m  [1mCREATE UNIQUE INDEX "index_resources_on_email" ON "resources" ("email")[0m
+  [1m[35m (2.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (2.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150720152501')
+  [1m[36m (2.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150715180015')[0m
+  [1m[35m (2.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150715182311')
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+SQLite3::ConstraintException: UNIQUE constraint failed: resources.email: INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+  [1m[36m (1.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)[0m
+SQLite3::ConstraintException: UNIQUE constraint failed: resources.email: INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+  [1m[35m (1.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+SQLite3::ConstraintException: UNIQUE constraint failed: resources.email: INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+  [1m[36m (2.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)[0m
+SQLite3::ConstraintException: UNIQUE constraint failed: resources.email: INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+  [1m[35m (1.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+SQLite3::ConstraintException: UNIQUE constraint failed: resources.email: INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+  [1m[36m (1.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)[0m
+SQLite3::ConstraintException: UNIQUE constraint failed: resources.email: INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+  [1m[35m (1.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+SQLite3::ConstraintException: UNIQUE constraint failed: resources.email: INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 980190962)
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)[0m
+SQLite3::ConstraintException: UNIQUE constraint failed: resources.email: INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+  [1m[35m (1.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+SQLite3::ConstraintException: UNIQUE constraint failed: resources.email: INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)[0m
+SQLite3::ConstraintException: UNIQUE constraint failed: resources.email: INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+  [1m[35m (1.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+SQLite3::ConstraintException: UNIQUE constraint failed: resources.email: INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 15:28:14', '2015-07-20 15:28:14', 298486374)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "resources"[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:29:19', '2015-07-20 15:29:19', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:29:19', '2015-07-20 15:29:19', 298486374)
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 630ms (Views: 629.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-20 11:29:20 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 40ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('  ') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------
+ResourceTest: test_email_addresses_should_be_unique
+---------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "resources" ("email", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "resource@example.com"], ["name", "Example Resource"], ["created_at", "2015-07-20 15:29:20.856523"], ["updated_at", "2015-07-20 15:29:20.856523"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('RESOURCE@EXAMPLE.COM') LIMIT 1[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[35mResource Exists (0.3ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[35mResource Exists (0.3ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------
+ResourceTest: test_email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('RESOURCE@foo.COM') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('A_US-ER@foo.bar.org') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('first.last@foo.jp') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('alic+bob@baz.cn') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------
+ResourceTest: test_email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example,com') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource_at_foo.org') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource.name@example.') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

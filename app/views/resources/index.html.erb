@@ -1,5 +1,12 @@
 <h1>Resources Index</h1>
 
     <p>Resource Category</p>
+    <!--Make this dynamic!-->
 
-    <p>List of resources</p>
+<% @resources.each do |resource| %>
+<%= resource.name %>
+<%= resource.email %>
+<%= resource.category %>
+<br />
+
+<% end %>
