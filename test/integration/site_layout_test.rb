@@ -5,8 +5,8 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
   test "layout links" do
     get root_path
     assert_template 'static_pages/home'
-    # assert_select "a[href=?]", "resources"
-    #Can't get the link test working.  Try later.
+    assert_select "a[href=?]", resources_path
+    assert_select "a[href=?]", new_resource_path
   end
   
 end

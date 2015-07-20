@@ -1,0 +1,15 @@
+<h1>Add resource</h1>
+
+<div>
+ <%= form_for(@resource) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br />
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  <br />
+
+  <%= f.submit "Create resource" %>
+ <% end %>
+</div>

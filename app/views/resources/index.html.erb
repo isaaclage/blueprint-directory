@@ -1,7 +1,7 @@
 <h1>Resources Index</h1>
 
-    <p>Resource Category</p>
-    <!--Make this dynamic!-->
+<p>Resource Category</p>
+<!--Make this dynamic!-->
 
 <% @resources.each do |resource| %>
 <%= resource.name %>
@@ -10,3 +10,7 @@
 <br />
 
 <% end %>
+
+<%= link_to "Create a New Resource", new_resource_path %>
+
+

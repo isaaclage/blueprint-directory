@@ -1,0 +1,2 @@
+<%= @resource.name %>, <%= @resource.email %> <br />
+<%= @resource.category %>
