@@ -945,3 +945,24 @@ Migrating to AddCategoryToResources (20150722172641)
 [0m
 =======
 >>>>>>> parent of 108b019... Fix resource form
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20150722184730)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150722184730"]]
+  [1m[36m (30.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddNameAndIdToCategory (20150722184954)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (12.2ms)[0m  [1mALTER TABLE "categories" ADD "name" varchar[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "categories" ADD "category_id" integer
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150722184954"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+

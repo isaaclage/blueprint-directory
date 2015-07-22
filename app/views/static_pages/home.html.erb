@@ -1,7 +1,6 @@
 <h1>This is our directory's home page!<h1>
 
-    <%  Resource.categories.each do |category| %>
-    
+    <% @categories.each do |category| %>
 
     <%= link_to "#{ category } Resources", resources_path(:category => category) %>
     <br />
