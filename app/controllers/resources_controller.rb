@@ -13,8 +13,9 @@ class ResourcesController < ApplicationController
   end
 
   def create
+    @category = params[:category]
     @resource = Resource.new(resource_params)
-    @resource.category_id = 1
+    @resource.category_id = @category[1]
     if @resource.save
       redirect_to @resource
     else
