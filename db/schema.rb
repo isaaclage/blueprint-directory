@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720173242) do
+ActiveRecord::Schema.define(version: 20150722172641) do
 
   create_table "resources", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "position"
     t.string   "location"
     t.string   "company"
     t.string   "website"
+    t.integer  "category"
   end
 
   add_index "resources", ["email"], name: "index_resources_on_email", unique: true

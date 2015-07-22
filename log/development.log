@@ -579,3 +579,366 @@ Migrating to AddLocationAndCompanyDetailsToResource (20150720173242)
             FROM sqlite_temp_master
             WHERE name='index_resources_on_email' AND type='index'
 [0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCategoryToResources (20150722172641)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "resources" ADD "category" integer[0m
+SQLite3::SQLException: duplicate column name: category: ALTER TABLE "resources" ADD "category" integer
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddLocationAndCompanyDetailsToResource (20150720173242)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TEMPORARY TABLE "aresources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar, "location" varchar, "company" varchar, "website" varchar) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "tindex_aresources_on_email" ON "aresources" ("email")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "resources"[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position","location","company","website") VALUES (1, 'Erika', 'erika@example.com', NULL, '2015-07-20 18:30:10.004566', '2015-07-20 18:30:10.004566', NULL, NULL, NULL, NULL)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position","location","company","website") VALUES (2, 'email', 'email@example.com', NULL, '2015-07-20 18:35:02.472124', '2015-07-20 18:35:02.472124', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position","location","company","website") VALUES (3, 'Erika', 'example@example.com', NULL, '2015-07-20 18:35:58.815371', '2015-07-20 18:35:58.815371', 'intern', 'New York', 'Blueprint Health', 'www.blueprinthealth.org')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position","location","company","website") VALUES (4, 'Resource', 'resrouce@email.com', NULL, '2015-07-22 17:24:16.139724', '2015-07-22 17:24:16.139724', '', '', '', '')[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "resources"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar, "location" varchar, "company" varchar) [0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_resources_on_email" ON "resources" ("email")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aresources"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","category","created_at","updated_at","position","location","company") VALUES (1, 'Erika', 'erika@example.com', NULL, '2015-07-20 18:30:10.004566', '2015-07-20 18:30:10.004566', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","category","created_at","updated_at","position","location","company") VALUES (2, 'email', 'email@example.com', NULL, '2015-07-20 18:35:02.472124', '2015-07-20 18:35:02.472124', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","category","created_at","updated_at","position","location","company") VALUES (3, 'Erika', 'example@example.com', NULL, '2015-07-20 18:35:58.815371', '2015-07-20 18:35:58.815371', 'intern', 'New York', 'Blueprint Health')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","category","created_at","updated_at","position","location","company") VALUES (4, 'Resource', 'resrouce@email.com', NULL, '2015-07-22 17:24:16.139724', '2015-07-22 17:24:16.139724', '', '', '')
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "aresources"[0m
+  [1m[35m (0.1ms)[0m  CREATE TEMPORARY TABLE "aresources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar, "location" varchar, "company" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "tindex_aresources_on_email" ON "aresources" ("email")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "resources"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position","location","company") VALUES (1, 'Erika', 'erika@example.com', NULL, '2015-07-20 18:30:10.004566', '2015-07-20 18:30:10.004566', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position","location","company") VALUES (2, 'email', 'email@example.com', NULL, '2015-07-20 18:35:02.472124', '2015-07-20 18:35:02.472124', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position","location","company") VALUES (3, 'Erika', 'example@example.com', NULL, '2015-07-20 18:35:58.815371', '2015-07-20 18:35:58.815371', 'intern', 'New York', 'Blueprint Health')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position","location","company") VALUES (4, 'Resource', 'resrouce@email.com', NULL, '2015-07-22 17:24:16.139724', '2015-07-22 17:24:16.139724', '', '', '')[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "resources"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar, "location" varchar) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_resources_on_email" ON "resources" ("email")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aresources"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","category","created_at","updated_at","position","location") VALUES (1, 'Erika', 'erika@example.com', NULL, '2015-07-20 18:30:10.004566', '2015-07-20 18:30:10.004566', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","category","created_at","updated_at","position","location") VALUES (2, 'email', 'email@example.com', NULL, '2015-07-20 18:35:02.472124', '2015-07-20 18:35:02.472124', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","category","created_at","updated_at","position","location") VALUES (3, 'Erika', 'example@example.com', NULL, '2015-07-20 18:35:58.815371', '2015-07-20 18:35:58.815371', 'intern', 'New York')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","category","created_at","updated_at","position","location") VALUES (4, 'Resource', 'resrouce@email.com', NULL, '2015-07-22 17:24:16.139724', '2015-07-22 17:24:16.139724', '', '')
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "aresources"[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "aresources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar, "location" varchar) 
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "tindex_aresources_on_email" ON "aresources" ("email")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "resources"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position","location") VALUES (1, 'Erika', 'erika@example.com', NULL, '2015-07-20 18:30:10.004566', '2015-07-20 18:30:10.004566', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position","location") VALUES (2, 'email', 'email@example.com', NULL, '2015-07-20 18:35:02.472124', '2015-07-20 18:35:02.472124', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position","location") VALUES (3, 'Erika', 'example@example.com', NULL, '2015-07-20 18:35:58.815371', '2015-07-20 18:35:58.815371', 'intern', 'New York')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position","location") VALUES (4, 'Resource', 'resrouce@email.com', NULL, '2015-07-22 17:24:16.139724', '2015-07-22 17:24:16.139724', '', '')[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "resources"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_resources_on_email" ON "resources" ("email")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aresources"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","category","created_at","updated_at","position") VALUES (1, 'Erika', 'erika@example.com', NULL, '2015-07-20 18:30:10.004566', '2015-07-20 18:30:10.004566', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","category","created_at","updated_at","position") VALUES (2, 'email', 'email@example.com', NULL, '2015-07-20 18:35:02.472124', '2015-07-20 18:35:02.472124', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","category","created_at","updated_at","position") VALUES (3, 'Erika', 'example@example.com', NULL, '2015-07-20 18:35:58.815371', '2015-07-20 18:35:58.815371', 'intern')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "resources" ("id","name","email","category","created_at","updated_at","position") VALUES (4, 'Resource', 'resrouce@email.com', NULL, '2015-07-22 17:24:16.139724', '2015-07-22 17:24:16.139724', '')
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "aresources"[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "aresources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar) 
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "tindex_aresources_on_email" ON "aresources" ("email")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "resources"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position") VALUES (1, 'Erika', 'erika@example.com', NULL, '2015-07-20 18:30:10.004566', '2015-07-20 18:30:10.004566', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position") VALUES (2, 'email', 'email@example.com', NULL, '2015-07-20 18:35:02.472124', '2015-07-20 18:35:02.472124', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position") VALUES (3, 'Erika', 'example@example.com', NULL, '2015-07-20 18:35:58.815371', '2015-07-20 18:35:58.815371', 'intern')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","category","created_at","updated_at","position") VALUES (4, 'Resource', 'resrouce@email.com', NULL, '2015-07-22 17:24:16.139724', '2015-07-22 17:24:16.139724', '')[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "resources"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_resources_on_email" ON "resources" ("email")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aresources"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","category","created_at","updated_at") VALUES (1, 'Erika', 'erika@example.com', NULL, '2015-07-20 18:30:10.004566', '2015-07-20 18:30:10.004566')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","category","created_at","updated_at") VALUES (2, 'email', 'email@example.com', NULL, '2015-07-20 18:35:02.472124', '2015-07-20 18:35:02.472124')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","category","created_at","updated_at") VALUES (3, 'Erika', 'example@example.com', NULL, '2015-07-20 18:35:58.815371', '2015-07-20 18:35:58.815371')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","category","created_at","updated_at") VALUES (4, 'Resource', 'resrouce@email.com', NULL, '2015-07-22 17:24:16.139724', '2015-07-22 17:24:16.139724')
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "aresources"[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150720173242"]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexToResourcesEmail (20150720152501)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  DROP INDEX "index_resources_on_email"
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20150720152501"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Migrating to CreateResources (20150715182311)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  DROP TABLE "resources"
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20150715182311"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Migrating to CreateUsers (20150715180015)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20150715180015"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150715180015)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150715180015"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateResources (20150715182311)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150715182311"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexToResourcesEmail (20150720152501)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_resources_on_email" ON "resources" ("email")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150720152501"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+Migrating to AddLocationAndCompanyDetailsToResource (20150720173242)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (19.1ms)[0m  ALTER TABLE "resources" ADD "position" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "resources" ADD "location" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "resources" ADD "company" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "resources" ADD "website" varchar[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150720173242"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddCategoryToResources (20150722172641)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "resources" ADD "category" integer[0m
+SQLite3::SQLException: duplicate column name: category: ALTER TABLE "resources" ADD "category" integer
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddLocationAndCompanyDetailsToResource (20150720173242)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mCREATE TEMPORARY TABLE "aresources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar, "location" varchar, "company" varchar, "website" varchar) [0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  CREATE UNIQUE INDEX "tindex_aresources_on_email" ON "aresources" ("email")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "resources"[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "resources"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar, "location" varchar, "company" varchar) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_resources_on_email" ON "resources" ("email")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aresources"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "aresources"[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "aresources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar, "location" varchar, "company" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "tindex_aresources_on_email" ON "aresources" ("email")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "resources"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "resources"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar, "location" varchar) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_resources_on_email" ON "resources" ("email")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aresources"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "aresources"[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "aresources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar, "location" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "tindex_aresources_on_email" ON "aresources" ("email")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "resources"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "resources"
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar) [0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_resources_on_email" ON "resources" ("email")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aresources"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "aresources"[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "aresources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "tindex_aresources_on_email" ON "aresources" ("email")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "resources"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "resources"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_resources_on_email" ON "resources" ("email")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aresources"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "aresources"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150720173242"]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexToResourcesEmail (20150720152501)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  DROP INDEX "index_resources_on_email"
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20150720152501"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+Migrating to CreateResources (20150715182311)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "resources"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20150715182311"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Migrating to CreateUsers (20150715180015)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20150715180015"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150715180015)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150715180015"]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateResources (20150715182311)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150715182311"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexToResourcesEmail (20150720152501)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_resources_on_email" ON "resources" ("email")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150720152501"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Migrating to AddLocationAndCompanyDetailsToResource (20150720173242)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "resources" ADD "position" varchar
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "resources" ADD "location" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "resources" ADD "company" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "resources" ADD "website" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150720173242"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddCategoryToResources (20150722172641)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "resources" ADD "category" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150722172641"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+[0m

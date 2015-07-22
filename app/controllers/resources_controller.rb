@@ -13,6 +13,7 @@ class ResourcesController < ApplicationController
 
   def create
     @resource = Resource.new(resource_params)
+    @resource.category = 0
     if @resource.save
       redirect_to @resource
     else
