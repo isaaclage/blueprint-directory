@@ -3,11 +3,17 @@ require 'test_helper'
 class ResourceTest < ActiveSupport::TestCase
 
   def setup
-    @resource = Resource.new(name: "Example Resource", email: "resource@example.com")
+    @category = categories(:legal)
+    @resource = @category.resources.build(name: "Example Resource", email: "resource@example.com")
   end
                              
   test "should be valid" do
     assert @resource.valid?
+  end
+
+  test "category id should be present" do
+    @resource.category_id = nil
+    assert_not @resource.valid?
   end
 
   test "name should be present" do
