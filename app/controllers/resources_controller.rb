@@ -4,7 +4,8 @@ class ResourcesController < ApplicationController
   end
   
   def index
-    @resources = Resource.all
+    @category = :design
+    @resources = Resource.where("category <> ?", Resource.categories[@category])
   end
 
   def new

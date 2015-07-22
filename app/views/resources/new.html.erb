@@ -1,7 +1,8 @@
 <h1>Add resource</h1>
 
 <div>
-  <%= form_for(@resource) do |f| %>
+  <div>
+  <%= form_for @resource, url: { action: "create" } do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br />
@@ -14,14 +15,18 @@
   <%= f.label :location %>
   <%= f.text_field :location %>
   <br />
+  </div>
 
+  <div>
   <br  />
   <%= f.label :company %>
   <%= f.text_field :company %>
   <br />
   <%= f.label :website %>
-  <%= f.text_field :website %>
+  <%= f.url_field :website %>
   <br />
+  </div>
+
   
   <%= f.submit "Create resource" %>
  <% end %>

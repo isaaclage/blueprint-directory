@@ -569,6 +569,7 @@ Migrating to AddLocationAndCompanyDetailsToResource (20150720173242)
             FROM sqlite_temp_master
             WHERE name='index_resources_on_email' AND type='index'
 [0m
+<<<<<<< HEAD
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (0.1ms)[0m  [1m            SELECT sql
@@ -942,3 +943,5 @@ Migrating to AddCategoryToResources (20150722172641)
             FROM sqlite_temp_master
             WHERE name='index_resources_on_email' AND type='index'
 [0m
+=======
+>>>>>>> parent of 108b019... Fix resource form
