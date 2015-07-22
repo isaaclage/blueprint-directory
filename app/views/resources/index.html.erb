@@ -4,7 +4,6 @@
 <br />
 
 <%= @resources.each do |resource| %>
-
 <%= resource.name %>
 <%= resource.email %>
 <%= resource.category %>
@@ -12,6 +11,8 @@
 
 <% end %>
 
-<%= link_to "Create a New Resource", new_resource_path(:category => @category) %>
+<%= @category[1] %>
+
+<%= link_to "Create a New Resource", new_resource_path %>
 
 

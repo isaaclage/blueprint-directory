@@ -26,6 +26,13 @@
   <%= f.url_field :website %>
   <br />
   </div>
+
+  <div>
+    <%= f.label :category_id %>
+    <%= f.number_field :category_id %>
+    <br />
+  </div>
+  <!-- This doesn't work -->
   
   <%= f.submit "Create resource" %>
  <% end %>
