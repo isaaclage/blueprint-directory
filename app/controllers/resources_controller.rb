@@ -4,8 +4,8 @@ class ResourcesController < ApplicationController
   end
   
   def index
-    @category = :design
-    @resources = Resource.where("category <> ?", Category.names[@category])
+    @category = params[:category]
+    @resources = Resource.where("category_id = ?", @category[1])
   end
 
   def new
@@ -14,7 +14,7 @@ class ResourcesController < ApplicationController
 
   def create
     @resource = Resource.new(resource_params)
-    @resource.category = 0
+    @resource.category_id = 1
     if @resource.save
       redirect_to @resource
     else
