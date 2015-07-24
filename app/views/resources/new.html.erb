@@ -1,5 +1,7 @@
 <h1>Add resource</h1>
 
+<%= params[:id] %>
+
 <div>
   <div>
   <%= form_for @resource, url: { action: "create" } do |f| %>
@@ -27,12 +29,8 @@
   <br />
   </div>
 
-  <div>
-    <%= f.label :category_id %>
-    <%= f.number_field :category_id %>
-    <br />
-  </div>
-  <!-- This doesn't work -->
+  <%= f.hidden_field :category_id, :value => params[:id] %>
+  <!-- Submits correct category with form -->
   
   <%= f.submit "Create resource" %>
  <% end %>

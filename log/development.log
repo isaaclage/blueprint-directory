@@ -1096,3 +1096,1618 @@ Migrating to AddCategoryIdToResource (20150722204048)
   [1m[36m (3.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150722184954')[0m
   [1m[35m (2.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150722203030')
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for ::1 at 2015-07-24 10:22:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 874ms (Views: 814.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:23:37 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '0')
+  Rendered resources/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 79ms (Views: 44.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resources/new" for ::1 at 2015-07-24 10:23:39 -0400
+Processing by ResourcesController#new as HTML
+  Rendered resources/new.html.erb within layouts/application (242.8ms)
+Completed 200 OK in 325ms (Views: 316.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/resources?category%5B%5D=Tech+and+Development&category%5B%5D=1" for ::1 at 2015-07-24 10:28:02 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Tech and Development", "1"]}
+  Rendered resources/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/resources/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/resources/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (125.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (92.2ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (316.4ms)
+
+
+Started GET "/resources?category%5B%5D=Tech+and+Development&category%5B%5D=1" for ::1 at 2015-07-24 10:28:04 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Tech and Development", "1"]}
+  Rendered resources/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/resources/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/resources/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (73.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (161.4ms)
+
+
+Started GET "/resources?category%5B%5D=Tech+and+Development&category%5B%5D=1" for ::1 at 2015-07-24 10:28:04 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Tech and Development", "1"]}
+  Rendered resources/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/resources/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/resources/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (71.2ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (161.8ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 10:28:18 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 197ms (Views: 164.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/resources.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:28:19 -0400
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:28:19 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:28:19 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 10:28:19 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 10:28:19 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 10:28:19 -0400
+
+
+Started GET "/assets/resources.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:28:19 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 10:28:19 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:28:19 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:28:19 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-24 10:28:19 -0400
+
+
+Started GET "/resources?category%5B%5D=Industry&category%5B%5D=2" for ::1 at 2015-07-24 10:28:21 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Industry", "2"]}
+  [1m[36mResource Load (0.4ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '2')[0m
+  Rendered resources/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/resources/new?id=2" for ::1 at 2015-07-24 10:28:22 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"2"}
+  Rendered resources/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 62ms (Views: 53.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resources?category%5B%5D=Security+and+Compliance&category%5B%5D=3" for ::1 at 2015-07-24 10:28:47 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Security and Compliance", "3"]}
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '3')
+  Rendered resources/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources/new?id=3" for ::1 at 2015-07-24 10:28:48 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"3"}
+  Rendered resources/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 54ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new?id=3" for ::1 at 2015-07-24 10:28:49 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"3"}
+  Rendered resources/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 59ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/resources.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:28:49 -0400
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:28:49 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:28:49 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 10:28:49 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 10:28:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 10:28:49 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-24 10:28:49 -0400
+
+
+Started GET "/assets/resources.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:28:49 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:28:49 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:28:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 10:28:49 -0400
+
+
+Started GET "/resources?category%5B%5D=Security+and+Compliance&category%5B%5D=3" for ::1 at 2015-07-24 10:29:42 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Security and Compliance", "3"]}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '3')[0m
+  Rendered resources/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 72ms (Views: 71.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 10:29:43 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 66ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:29:44 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '0')
+  Rendered resources/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:30:09 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '0')[0m
+  Rendered resources/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 55ms (Views: 50.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/resources/new?id=0" for ::1 at 2015-07-24 10:30:10 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"0"}
+  Rendered resources/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 58ms (Views: 50.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/resources/new?id=0" for ::1 at 2015-07-24 10:30:25 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"0"}
+  Rendered resources/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/resources.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:30:25 -0400
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:30:25 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:30:25 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 10:30:25 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 10:30:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 10:30:25 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 10:30:25 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:30:25 -0400
+
+
+Started GET "/assets/resources.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:30:25 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:30:25 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-24 10:30:25 -0400
+
+
+Started POST "/resources" for ::1 at 2015-07-24 10:30:35 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d/+TTuHNY5M6Ew+TDWSNd7no8UgzxJD3klOVoxOMPj++HqTbgK+ozstXPqZVHaeGGKFTShgd5SpCq3q01zWtYA==", "resource"=>{"name"=>"name1", "email"=>"name1@email1.com", "position"=>"", "location"=>"", "company"=>"", "website"=>"", "category_id"=>""}, "commit"=>"Create resource"}
+Unpermitted parameter: category_id
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mResource Exists (24.6ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('name1@email1.com') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "resources" ("name", "email", "position", "location", "company", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "name1"], ["email", "name1@email1.com"], ["position", ""], ["location", ""], ["company", ""], ["website", ""], ["created_at", "2015-07-24 14:30:35.947388"], ["updated_at", "2015-07-24 14:30:35.947388"]]
+  [1m[36m (10.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/resources/7
+Completed 302 Found in 234ms (ActiveRecord: 36.0ms)
+
+
+Started GET "/resources/7" for ::1 at 2015-07-24 10:30:35 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mResource Load (0.4ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered resources/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 86ms (Views: 49.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 10:30:43 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources?category%5B%5D=Venture+Capital&category%5B%5D=5" for ::1 at 2015-07-24 10:30:45 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Venture Capital", "5"]}
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '5')[0m
+  Rendered resources/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 60ms (Views: 58.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resources?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:30:48 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '0')
+  Rendered resources/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources?category%5B%5D=Tech+and+Development&category%5B%5D=1" for ::1 at 2015-07-24 10:30:51 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Tech and Development", "1"]}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '1')[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered resources/index.html.erb within layouts/application (90.4ms)
+Completed 200 OK in 136ms (Views: 134.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/resources?category%5B%5D=Industry&category%5B%5D=2" for ::1 at 2015-07-24 10:30:55 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Industry", "2"]}
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '2')
+  Rendered resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 56ms (Views: 55.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources?category%5B%5D=Security+and+Compliance&category%5B%5D=3" for ::1 at 2015-07-24 10:30:57 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Security and Compliance", "3"]}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '3')[0m
+  Rendered resources/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources?category%5B%5D=Talent+and+HR&category%5B%5D=4" for ::1 at 2015-07-24 10:31:00 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Talent and HR", "4"]}
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '4')
+  Rendered resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources?category%5B%5D=Venture+Capital&category%5B%5D=5" for ::1 at 2015-07-24 10:31:02 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Venture Capital", "5"]}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '5')[0m
+  Rendered resources/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:31:18 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '0')
+  Rendered resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources/new?id=0" for ::1 at 2015-07-24 10:31:25 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"0"}
+  Rendered resources/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 58ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new?id=0" for ::1 at 2015-07-24 10:31:49 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"0"}
+  Rendered resources/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 203ms (Views: 202.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/resources.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:31:49 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 10:31:49 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:31:49 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 10:31:49 -0400
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:31:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 10:31:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 10:31:49 -0400
+
+
+Started GET "/assets/resources.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:31:49 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:31:49 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:31:49 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-24 10:31:49 -0400
+
+
+Started POST "/resources" for ::1 at 2015-07-24 10:32:00 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zTAdNhr2vPzjU8+Z3VXQ3osKh+xq9r1Z/MVOu4MoG8UE0Sqje5R3oRIX/qyFLPovKkMl7kEvyIQsPaGsR5GImg==", "resource"=>{"name"=>"name0", "email"=>"email0@email.com", "position"=>"", "location"=>"", "company"=>"", "website"=>""}, "commit"=>"Create resource"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('email0@email.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "resources" ("name", "email", "position", "location", "company", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "name0"], ["email", "email0@email.com"], ["position", ""], ["location", ""], ["company", ""], ["website", ""], ["created_at", "2015-07-24 14:32:00.088351"], ["updated_at", "2015-07-24 14:32:00.088351"]]
+  [1m[35m (28.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/resources/8
+Completed 302 Found in 34ms (ActiveRecord: 29.2ms)
+
+
+Started GET "/resources/8" for ::1 at 2015-07-24 10:32:00 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered resources/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources" for ::1 at 2015-07-24 10:32:08 -0400
+Processing by ResourcesController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/resources_controller.rb:8:in `index'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (92.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (247.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 10:32:13 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 94ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:32:15 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '0')
+  Rendered resources/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 65ms (Views: 64.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources?category%5B%5D=Tech+and+Development&category%5B%5D=1" for ::1 at 2015-07-24 10:32:17 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Tech and Development", "1"]}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '1')[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered resources/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resources?category%5B%5D=Industry&category%5B%5D=2" for ::1 at 2015-07-24 10:32:20 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Industry", "2"]}
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '2')
+  Rendered resources/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 93ms (Views: 91.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resources?category%5B%5D=Security+and+Compliance&category%5B%5D=3" for ::1 at 2015-07-24 10:32:22 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Security and Compliance", "3"]}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '3')[0m
+  Rendered resources/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources?category%5B%5D=Talent+and+HR&category%5B%5D=4" for ::1 at 2015-07-24 10:32:24 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Talent and HR", "4"]}
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '4')
+  Rendered resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources?category%5B%5D=Venture+Capital&category%5B%5D=5" for ::1 at 2015-07-24 10:32:25 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Venture Capital", "5"]}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '5')[0m
+  Rendered resources/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.2ms)
+  [1m[36mResource Load (0.4ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 7]]
+
+
+Started GET "/resources?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:33:28 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '0')
+  Rendered resources/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources/new?id=0" for ::1 at 2015-07-24 10:33:29 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"0"}
+  Rendered resources/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 59ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new?id=0" for ::1 at 2015-07-24 10:33:43 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"0"}
+  Rendered resources/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 43ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/resources.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:33:43 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:33:43 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 10:33:43 -0400
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:33:43 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 10:33:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 10:33:43 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 10:33:43 -0400
+
+
+Started GET "/assets/resources.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:33:43 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:33:43 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:33:43 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-24 10:33:43 -0400
+
+
+Started POST "/resources" for ::1 at 2015-07-24 10:33:56 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JEF+fkHbTPQa7aTE2WW8TDvmuVZtqUn2tw9vyXtTAcXtoEnrILmHqeuplfGBHJa9mq8bVEZwPCtn94Dev+qSmg==", "resource"=>{"name"=>"new resource", "email"=>"email@newresource.com", "position"=>"", "location"=>"", "company"=>"", "website"=>""}, "commit"=>"Create resource"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('email@newresource.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "resources" ("name", "email", "position", "location", "company", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "new resource"], ["email", "email@newresource.com"], ["position", ""], ["location", ""], ["company", ""], ["website", ""], ["created_at", "2015-07-24 14:33:56.469056"], ["updated_at", "2015-07-24 14:33:56.469056"]]
+  [1m[35m (18.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/resources/9
+Completed 302 Found in 24ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/resources/9" for ::1 at 2015-07-24 10:33:56 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered resources/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/resources" for ::1 at 2015-07-24 10:34:24 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JEF+fkHbTPQa7aTE2WW8TDvmuVZtqUn2tw9vyXtTAcXtoEnrILmHqeuplfGBHJa9mq8bVEZwPCtn94Dev+qSmg==", "resource"=>{"name"=>"new resource", "email"=>"email1@newresource.com", "position"=>"", "location"=>"", "company"=>"", "website"=>""}, "commit"=>"Create resource"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('email1@newresource.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "resources" ("name", "email", "position", "location", "company", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new resource"], ["email", "email1@newresource.com"], ["position", ""], ["location", ""], ["company", ""], ["website", ""], ["created_at", "2015-07-24 14:34:25.052236"], ["updated_at", "2015-07-24 14:34:25.052236"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/resources/10
+Completed 302 Found in 44ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/resources/10" for ::1 at 2015-07-24 10:34:25 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mResource Load (0.2ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered resources/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 167ms (Views: 165.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 10:34:32 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 110ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:34:33 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '0')[0m
+  Rendered resources/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+  [1m[35mResource Load (0.3ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 10]]
+
+
+Started GET "/" for ::1 at 2015-07-24 10:36:33 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 328ms (Views: 296.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/resources.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:36:34 -0400
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:36:34 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:36:34 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 10:36:34 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 10:36:34 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 10:36:34 -0400
+
+
+Started GET "/assets/resources.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:36:34 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:36:34 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 10:36:34 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:36:34 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-24 10:36:34 -0400
+
+
+Started GET "/resources?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:36:35 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  [1m[35mResource Load (0.5ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '0')
+  Rendered resources/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 77ms (Views: 51.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/resources/new?id=0" for ::1 at 2015-07-24 10:36:36 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"0"}
+  Rendered resources/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 59ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resources/new?id=0" for ::1 at 2015-07-24 10:36:46 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"0"}
+  Rendered resources/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/resources.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:36:46 -0400
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:36:46 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:36:46 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 10:36:46 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 10:36:46 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 10:36:46 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 10:36:46 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:36:46 -0400
+
+
+Started GET "/assets/resources.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:36:46 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:36:46 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-24 10:36:46 -0400
+
+
+Started POST "/resources" for ::1 at 2015-07-24 10:36:52 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VEVhoB96kh6WXl2p19PFC/TUOl6EqxSrouxe/s8rxMqdpFY1fhhZQ2cabJyPqu/6VZ2YXK9yYXZyFLHpC5JXlQ==", "resource"=>{"name"=>"new4", "email"=>"new4@email.com", "position"=>"", "location"=>"", "company"=>"", "website"=>""}, "commit"=>"Create resource"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('new4@email.com') LIMIT 1
+  [1m[36mSQL (30.3ms)[0m  [1mINSERT INTO "resources" ("name", "email", "position", "location", "company", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "new4"], ["email", "new4@email.com"], ["position", ""], ["location", ""], ["company", ""], ["website", ""], ["created_at", "2015-07-24 14:36:52.917747"], ["updated_at", "2015-07-24 14:36:52.917747"]]
+  [1m[35m (4.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/resources/11
+Completed 302 Found in 43ms (ActiveRecord: 35.3ms)
+
+
+Started GET "/resources/11" for ::1 at 2015-07-24 10:36:52 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered resources/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.2ms)
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 11]]
+
+
+Started GET "/" for ::1 at 2015-07-24 10:38:19 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 269ms (Views: 239.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:38:21 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '0')
+  Rendered resources/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 85ms (Views: 51.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/resources/new?id%5B%5D=UI%2FUX+Design&id%5B%5D=0" for ::1 at 2015-07-24 10:38:22 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>["UI/UX Design", "0"]}
+  Rendered resources/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 57ms (Views: 49.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resources/new?id%5B%5D=UI%2FUX+Design&id%5B%5D=0" for ::1 at 2015-07-24 10:38:37 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>["UI/UX Design", "0"]}
+  Rendered resources/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 57ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/resources.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:38:37 -0400
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:38:37 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 10:38:37 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:38:37 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 10:38:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 10:38:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 10:38:37 -0400
+
+
+Started GET "/assets/resources.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:38:37 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:38:37 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:38:37 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-24 10:38:37 -0400
+
+
+Started POST "/resources" for ::1 at 2015-07-24 10:38:43 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aFjfSV+HsLZjJkAL/cCnDGbbFrZ+FLRqOqY9spEg4rOhuejcPuV765JicT6luY39x5K0tFXNwbfqXtKlVZlx7A==", "resource"=>{"name"=>"new7", "email"=>"new7@email.com", "position"=>"", "location"=>"", "company"=>"", "website"=>""}, "commit"=>"Create resource"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('new7@email.com') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "resources" ("name", "email", "position", "location", "company", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "new7"], ["email", "new7@email.com"], ["position", ""], ["location", ""], ["company", ""], ["website", ""], ["created_at", "2015-07-24 14:38:43.389225"], ["updated_at", "2015-07-24 14:38:43.389225"]]
+  [1m[35m (26.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/resources/12
+Completed 302 Found in 35ms (ActiveRecord: 27.1ms)
+
+
+Started GET "/resources/12" for ::1 at 2015-07-24 10:38:43 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered resources/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 46ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+  [1m[35mResource Load (0.3ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 12]]
+
+
+Started GET "/resources?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:39:07 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  [1m[35mResource Load (0.5ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '0')
+  Rendered resources/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 65ms (Views: 63.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/resources/new?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:39:08 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  Rendered resources/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:39:22 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  Rendered resources/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/resources.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:39:22 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:39:22 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 10:39:22 -0400
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:39:22 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 10:39:22 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 10:39:22 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 10:39:22 -0400
+
+
+Started GET "/assets/resources.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:39:22 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:39:22 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:39:22 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-24 10:39:22 -0400
+
+
+Started POST "/resources" for ::1 at 2015-07-24 10:39:28 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0M7Ojh0tg46lbK8hFRkdFZL4E+P8xs8/XsHCu2Wbh6YZL/kbfE9I01QonhRNYDfkM7Gx4dcfuuKOOS2soSIU+Q==", "resource"=>{"name"=>"uiux", "email"=>"uiux@email.com", "position"=>"", "location"=>"", "company"=>"", "website"=>""}, "commit"=>"Create resource"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mResource Exists (0.5ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('uiux@email.com') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "resources" ("name", "email", "position", "location", "company", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "uiux"], ["email", "uiux@email.com"], ["position", ""], ["location", ""], ["company", ""], ["website", ""], ["created_at", "2015-07-24 14:39:28.867106"], ["updated_at", "2015-07-24 14:39:28.867106"]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/resources/13
+Completed 302 Found in 9ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/resources/13" for ::1 at 2015-07-24 10:39:28 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mResource Load (0.1ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered resources/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.1ms)
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 13]]
+
+
+Started GET "/resources?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:39:40 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '0')
+  Rendered resources/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 10:39:41 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 94ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources?category%5B%5D=UI%2FUX+Design&category%5B%5D=0" for ::1 at 2015-07-24 10:43:02 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["UI/UX Design", "0"]}
+  [1m[36mResource Load (0.4ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '0')[0m
+  Rendered resources/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 55ms (Views: 51.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/resources?category%5B%5D=Tech+and+Development&category%5B%5D=1" for ::1 at 2015-07-24 10:43:04 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Tech and Development", "1"]}
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '1')
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered resources/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 122ms (Views: 119.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resources/new?id=1" for ::1 at 2015-07-24 10:43:06 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendered resources/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 74ms (Views: 72.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new?id=1" for ::1 at 2015-07-24 10:43:12 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendered resources/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 47ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/resources.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:43:13 -0400
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:43:13 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:43:13 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 10:43:13 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 10:43:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 10:43:13 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 10:43:13 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:43:13 -0400
+
+
+Started GET "/assets/resources.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:43:13 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:43:13 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-24 10:43:13 -0400
+
+
+Started POST "/resources" for ::1 at 2015-07-24 10:43:18 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P2J55SM9EG9dD7RELAlCPoHl6CwcW7ADI3Tkg8hdUbz2g05wQl/bMqxLhXF0cGjPIKxKLjeCxd7zjAuUDOTC4w==", "resource"=>{"name"=>"tech", "email"=>"tech@email.com", "position"=>"", "location"=>"", "company"=>"", "website"=>""}, "commit"=>"Create resource"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mResource Exists (0.3ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('tech@email.com') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "resources" ("name", "email", "position", "location", "company", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "tech"], ["email", "tech@email.com"], ["position", ""], ["location", ""], ["company", ""], ["website", ""], ["created_at", "2015-07-24 14:43:18.571306"], ["updated_at", "2015-07-24 14:43:18.571306"]]
+  [1m[35m (23.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/resources/14
+Completed 302 Found in 33ms (ActiveRecord: 24.8ms)
+
+
+Started GET "/resources/14" for ::1 at 2015-07-24 10:43:18 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered resources/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.2ms)
+  [1m[35mResource Load (0.3ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 14]]
+
+
+Started GET "/resources/new?id=1" for ::1 at 2015-07-24 10:45:02 -0400
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/controllers/resources_controller.rb:16: syntax error, unexpected '=', expecting keyword_end
+    :category_id = params[:id]
+                  ^):
+  app/controllers/resources_controller.rb:16: syntax error, unexpected '=', expecting keyword_end
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (109.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (224.9ms)
+
+
+Started GET "/resources/new?id=1" for ::1 at 2015-07-24 10:51:39 -0400
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/controllers/resources_controller.rb:16: syntax error, unexpected '=', expecting keyword_end
+    :category_id = params[:id]
+                  ^):
+  app/controllers/resources_controller.rb:16: syntax error, unexpected '=', expecting keyword_end
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (87.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (199.8ms)
+
+
+Started GET "/resources/new?id=1" for ::1 at 2015-07-24 10:54:14 -0400
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/controllers/resources_controller.rb:16: syntax error, unexpected '=', expecting keyword_end
+    :category_id = params[:id]
+                  ^):
+  app/controllers/resources_controller.rb:16: syntax error, unexpected '=', expecting keyword_end
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (97.7ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (214.1ms)
+
+
+Started GET "/resources/new?id=1" for ::1 at 2015-07-24 10:54:28 -0400
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/controllers/resources_controller.rb:15: syntax error, unexpected '=', expecting keyword_end
+    :category_id = params[:id]
+                  ^):
+  app/controllers/resources_controller.rb:15: syntax error, unexpected '=', expecting keyword_end
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (72.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (192.4ms)
+
+
+Started GET "/resources" for ::1 at 2015-07-24 10:54:32 -0400
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/controllers/resources_controller.rb:15: syntax error, unexpected '=', expecting keyword_end
+    :category_id = params[:id]
+                  ^):
+  app/controllers/resources_controller.rb:15: syntax error, unexpected '=', expecting keyword_end
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (176.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 10:54:36 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 367ms (Views: 341.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources?category%5B%5D=Venture+Capital&category%5B%5D=5" for ::1 at 2015-07-24 10:54:40 -0400
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/controllers/resources_controller.rb:15: syntax error, unexpected '=', expecting keyword_end
+    :category_id = params[:id]
+                  ^):
+  app/controllers/resources_controller.rb:15: syntax error, unexpected '=', expecting keyword_end
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (62.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (138.8ms)
+
+
+Started GET "/resources?category%5B%5D=Venture+Capital&category%5B%5D=5" for ::1 at 2015-07-24 10:54:40 -0400
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/controllers/resources_controller.rb:15: syntax error, unexpected '=', expecting keyword_end
+    :category_id = params[:id]
+                  ^):
+  app/controllers/resources_controller.rb:15: syntax error, unexpected '=', expecting keyword_end
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (76.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (157.7ms)
+
+
+Started GET "/resources?category%5B%5D=Venture+Capital&category%5B%5D=5" for ::1 at 2015-07-24 10:55:08 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Venture Capital", "5"]}
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/resources_controller.rb:7:in `index'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.2ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.0ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (175.7ms)
+
+
+Started GET "/resources?category%5B%5D=Venture+Capital&category%5B%5D=5" for ::1 at 2015-07-24 10:55:33 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Venture Capital", "5"]}
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '5')
+  Rendered resources/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 59ms (Views: 52.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/resources.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:55:34 -0400
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:55:34 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:55:34 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 10:55:34 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 10:55:34 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 10:55:34 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 10:55:34 -0400
+
+
+Started GET "/assets/resources.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:55:34 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:55:34 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:55:34 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-24 10:55:34 -0400
+
+
+Started GET "/resources?category%5B%5D=Industry&category%5B%5D=2" for ::1 at 2015-07-24 10:55:37 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Industry", "2"]}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '2')[0m
+  Rendered resources/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources/new?id=2" for ::1 at 2015-07-24 10:55:38 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"2"}
+  Rendered resources/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;  end 
+              ^
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:41: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/resources/new.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+  app/views/resources/new.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/resources/new.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.0ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (170.2ms)
+
+
+Started GET "/resources/new?id=2" for ::1 at 2015-07-24 10:55:39 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"2"}
+  Rendered resources/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;  end 
+              ^
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:41: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/resources/new.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+  app/views/resources/new.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/resources/new.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (73.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (151.3ms)
+
+
+Started GET "/resources/new?id=2" for ::1 at 2015-07-24 10:55:40 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"2"}
+  Rendered resources/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;  end 
+              ^
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:41: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/resources/new.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+  app/views/resources/new.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/resources/new.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (110.7ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (82.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (179.7ms)
+
+
+Started GET "/resources/new?id=2" for ::1 at 2015-07-24 10:55:58 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"2"}
+  Rendered resources/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;  end 
+              ^
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/resources/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+  app/views/resources/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/resources/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (75.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (169.0ms)
+
+
+Started GET "/resources/new?id=2" for ::1 at 2015-07-24 10:56:01 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"2"}
+  Rendered resources/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;  end 
+              ^
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/resources/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+  app/views/resources/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/resources/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (67.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (154.4ms)
+
+
+Started GET "/resources/new?id=2" for ::1 at 2015-07-24 10:56:02 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"2"}
+  Rendered resources/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;  end 
+              ^
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/resources/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+  app/views/resources/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/resources/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (67.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (156.3ms)
+
+
+Started GET "/resources/new?id=2" for ::1 at 2015-07-24 10:57:34 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"2"}
+  Rendered resources/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;  end 
+              ^
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/resources/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+  app/views/resources/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/resources/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.1ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (75.0ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (222.5ms)
+
+
+Started GET "/resources/new?id=2" for ::1 at 2015-07-24 10:57:52 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"2"}
+  Rendered resources/new.html.erb within layouts/application (25.5ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `hidden_field_tag' for #<ActionView::Helpers::FormBuilder:0x007fd8c4674400>):
+    29:   <br />
+    30:   </div>
+    31: 
+    32:   <%= f.hidden_field_tag(:category_id, params[:id]) %>
+    33:   
+    34:   <%= f.submit "Create resource" %>
+    35:  <% end %>
+  app/views/resources/new.html.erb:32:in `block in _app_views_resources_new_html_erb__857569477975580677_70284492633520'
+  app/views/resources/new.html.erb:7:in `_app_views_resources_new_html_erb__857569477975580677_70284492633520'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (92.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (73.2ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (168.0ms)
+
+
+Started GET "/resources/new?id=2" for ::1 at 2015-07-24 10:58:49 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"2"}
+  Rendered resources/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/erikatlage/Desktop/blueprint-directory/app/views/resources/new.html.erb:32: syntax error, unexpected ')', expecting keyword_end
+...ory_id, value => params[:id]) );@output_buffer.safe_append='
+...                               ^):
+  app/views/resources/new.html.erb:32: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (89.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (205.9ms)
+
+
+Started GET "/resources/new?id=2" for ::1 at 2015-07-24 10:59:03 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"2"}
+  Rendered resources/new.html.erb within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `value' for #<#<Class:0x007fd8c621dad0>:0x007fd8c8fb12a8>):
+    29:   <br />
+    30:   </div>
+    31: 
+    32:   <%= f.hidden_field :category_id, value => params[:id] %>
+    33:   
+    34:   <%= f.submit "Create resource" %>
+    35:  <% end %>
+  app/views/resources/new.html.erb:32:in `block in _app_views_resources_new_html_erb__857569477975580677_70284506636160'
+  app/views/resources/new.html.erb:7:in `_app_views_resources_new_html_erb__857569477975580677_70284506636160'
+
+
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (87.5ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/erikatlage/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (205.4ms)
+
+
+Started GET "/resources/new?id=2" for ::1 at 2015-07-24 10:59:44 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"id"=>"2"}
+  Rendered resources/new.html.erb within layouts/application (226.9ms)
+Completed 200 OK in 438ms (Views: 437.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/resources.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:59:44 -0400
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:59:44 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 10:59:44 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 10:59:44 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 10:59:44 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 10:59:44 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 10:59:44 -0400
+
+
+Started GET "/assets/resources.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:59:44 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:59:44 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 10:59:44 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-24 10:59:44 -0400
+
+
+Started POST "/resources" for ::1 at 2015-07-24 10:59:53 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r62uPG50/3kPLE6A+l1zqjlDYEzP4DIY3bzZeb1xgwdmTJmpDxY0JP5of7WiJFlbmArCTuQ5R8UNRDZuecgQWA==", "resource"=>{"name"=>"name6", "email"=>"name6@email.com", "position"=>"", "location"=>"", "company"=>"", "website"=>"", "category_id"=>"2"}, "commit"=>"Create resource"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('name6@email.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "resources" ("name", "email", "position", "location", "company", "website", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "name6"], ["email", "name6@email.com"], ["position", ""], ["location", ""], ["company", ""], ["website", ""], ["category_id", 2], ["created_at", "2015-07-24 14:59:53.473972"], ["updated_at", "2015-07-24 14:59:53.473972"]]
+  [1m[36m (10.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/resources/15
+Completed 302 Found in 21ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/resources/15" for ::1 at 2015-07-24 10:59:53 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mResource Load (0.3ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 15]]
+  Rendered resources/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 60ms (Views: 58.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 10:59:58 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 128ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources?category%5B%5D=Tech+and+Development&category%5B%5D=1" for ::1 at 2015-07-24 10:59:59 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Tech and Development", "1"]}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE (category_id = '1')[0m
+  [1m[35mCategory Load (31.4ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered resources/index.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 91ms (Views: 57.5ms | ActiveRecord: 32.0ms)
+
+
+Started GET "/resources?category%5B%5D=Industry&category%5B%5D=2" for ::1 at 2015-07-24 11:00:01 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"category"=>["Industry", "2"]}
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources" WHERE (category_id = '2')
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered resources/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.4ms)
