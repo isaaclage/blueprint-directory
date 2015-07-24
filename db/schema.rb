@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20150722204048) do
     t.string   "location"
     t.string   "company"
     t.string   "website"
-    t.integer  "category"
     t.integer  "category_id"
   end
 

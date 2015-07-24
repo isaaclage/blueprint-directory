@@ -2711,3 +2711,71 @@ Processing by ResourcesController#index as HTML
   [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 2]]
   Rendered resources/index.html.erb within layouts/application (2.4ms)
 Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TEMPORARY TABLE "aresources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar, "location" varchar, "company" varchar, "website" varchar, "category" integer, "category_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  CREATE UNIQUE INDEX "tindex_aresources_on_email" ON "aresources" ("email")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "resources"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (1, 'Erika', 'email@example.com', '2015-07-22 20:48:48.042988', '2015-07-22 20:48:48.042988', '', '', '', '', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (2, 'name', 'email@email.com', '2015-07-22 20:51:30.731661', '2015-07-22 20:51:30.731661', '', '', '', '', NULL, 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (3, 'name', 'name@email.com', '2015-07-22 20:53:39.077160', '2015-07-22 20:53:39.077160', '', '', '', '', NULL, 1)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (4, 'name', 'email45@email.com', '2015-07-22 21:26:18.036438', '2015-07-22 21:26:18.036438', '', '', '', '', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (5, 'resource', 'resource@email.com', '2015-07-22 21:26:55.539605', '2015-07-22 21:26:55.539605', '', '', '', '', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (6, 'resource1', 'resource1@gmail.com', '2015-07-22 21:39:50.750719', '2015-07-22 21:39:50.750719', '', '', '', '', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (7, 'name1', 'name1@email1.com', '2015-07-24 14:30:35.947388', '2015-07-24 14:30:35.947388', '', '', '', '', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (8, 'name0', 'email0@email.com', '2015-07-24 14:32:00.088351', '2015-07-24 14:32:00.088351', '', '', '', '', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (9, 'new resource', 'email@newresource.com', '2015-07-24 14:33:56.469056', '2015-07-24 14:33:56.469056', '', '', '', '', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (10, 'new resource', 'email1@newresource.com', '2015-07-24 14:34:25.052236', '2015-07-24 14:34:25.052236', '', '', '', '', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (11, 'new4', 'new4@email.com', '2015-07-24 14:36:52.917747', '2015-07-24 14:36:52.917747', '', '', '', '', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (12, 'new7', 'new7@email.com', '2015-07-24 14:38:43.389225', '2015-07-24 14:38:43.389225', '', '', '', '', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (13, 'uiux', 'uiux@email.com', '2015-07-24 14:39:28.867106', '2015-07-24 14:39:28.867106', '', '', '', '', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (14, 'tech', 'tech@email.com', '2015-07-24 14:43:18.571306', '2015-07-24 14:43:18.571306', '', '', '', '', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aresources" ("id","name","email","created_at","updated_at","position","location","company","website","category","category_id") VALUES (15, 'name6', 'name6@email.com', '2015-07-24 14:59:53.473972', '2015-07-24 14:59:53.473972', '', '', '', '', NULL, 2)
+  [1m[36m (16.5ms)[0m  [1mDROP TABLE "resources"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar, "location" varchar, "company" varchar, "website" varchar, "category_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aresources_on_email' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  CREATE UNIQUE INDEX "index_resources_on_email" ON "resources" ("email")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aresources"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (1, 'Erika', 'email@example.com', '2015-07-22 20:48:48.042988', '2015-07-22 20:48:48.042988', '', '', '', '', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (2, 'name', 'email@email.com', '2015-07-22 20:51:30.731661', '2015-07-22 20:51:30.731661', '', '', '', '', 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (3, 'name', 'name@email.com', '2015-07-22 20:53:39.077160', '2015-07-22 20:53:39.077160', '', '', '', '', 1)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (4, 'name', 'email45@email.com', '2015-07-22 21:26:18.036438', '2015-07-22 21:26:18.036438', '', '', '', '', NULL)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (5, 'resource', 'resource@email.com', '2015-07-22 21:26:55.539605', '2015-07-22 21:26:55.539605', '', '', '', '', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (6, 'resource1', 'resource1@gmail.com', '2015-07-22 21:39:50.750719', '2015-07-22 21:39:50.750719', '', '', '', '', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (7, 'name1', 'name1@email1.com', '2015-07-24 14:30:35.947388', '2015-07-24 14:30:35.947388', '', '', '', '', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (8, 'name0', 'email0@email.com', '2015-07-24 14:32:00.088351', '2015-07-24 14:32:00.088351', '', '', '', '', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (9, 'new resource', 'email@newresource.com', '2015-07-24 14:33:56.469056', '2015-07-24 14:33:56.469056', '', '', '', '', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (10, 'new resource', 'email1@newresource.com', '2015-07-24 14:34:25.052236', '2015-07-24 14:34:25.052236', '', '', '', '', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (11, 'new4', 'new4@email.com', '2015-07-24 14:36:52.917747', '2015-07-24 14:36:52.917747', '', '', '', '', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (12, 'new7', 'new7@email.com', '2015-07-24 14:38:43.389225', '2015-07-24 14:38:43.389225', '', '', '', '', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (13, 'uiux', 'uiux@email.com', '2015-07-24 14:39:28.867106', '2015-07-24 14:39:28.867106', '', '', '', '', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (14, 'tech', 'tech@email.com', '2015-07-24 14:43:18.571306', '2015-07-24 14:43:18.571306', '', '', '', '', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "resources" ("id","name","email","created_at","updated_at","position","location","company","website","category_id") VALUES (15, 'name6', 'name6@email.com', '2015-07-24 14:59:53.473972', '2015-07-24 14:59:53.473972', '', '', '', '', 2)
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "aresources"[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150722172641"]]
+  [1m[36m (42.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_email' AND type='index'
+[0m

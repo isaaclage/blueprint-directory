@@ -5,7 +5,7 @@ class ResourcesController < ApplicationController
   
   def index
     @category = params[:category]
-    @resources = Resource.where("category_id = ?", @category[1])
+    @resources = Resource.where("category_id = ?", @category)
   end
 
   def new
