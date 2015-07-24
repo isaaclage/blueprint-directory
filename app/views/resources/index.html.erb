@@ -1,4 +1,4 @@
-<h1>Resources Index</h1>
+<h1><%= @category [0] %> Resources Index</h1>
 
 <br />
 <%= @resources.each do |resource| %>
@@ -9,6 +9,6 @@
 
 <% end %>
 
-<%= link_to "Create a New Resource", new_resource_path(:id => @category) %>
+<%= link_to "Create a New #{ @category[0] } Resource", new_resource_path(:id => @category[1]) %>
 
 
