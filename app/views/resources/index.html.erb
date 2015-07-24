@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <h1>Resources Index</h1>
+=======
+<h1><%= @category [0] %> Resources Index</h1>
+>>>>>>> category-model
 
 <br />
 <%= @resources.each do |resource| %>
@@ -9,6 +13,10 @@
 
 <% end %>
 
+<<<<<<< HEAD
 <%= link_to "Create a New Resource", new_resource_path(:id => @category) %>
+=======
+<%= link_to "Create a New #{ @category[0] } Resource", new_resource_path(:id => @category[1]) %>
+>>>>>>> category-model
 
 
