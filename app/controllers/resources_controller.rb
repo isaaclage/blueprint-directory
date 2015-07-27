@@ -9,10 +9,12 @@ class ResourcesController < ApplicationController
   end
 
   def new
+    @category = params[:category]
     @resource = Resource.new
   end
 
   def create
+    @category = params[:category]
     @resource = Resource.new(resource_params)
     if @resource.save
       redirect_to @resource

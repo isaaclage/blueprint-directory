@@ -1,4 +1,4 @@
-<h1>Add resource</h1>
+<h1>Add <%= @category[0] %> resource</h1>
 
 <div>
   <div>
@@ -15,9 +15,7 @@
   <%= f.label :location %>
   <%= f.text_field :location %>
   <br />
-  </div>
 
-  <div>
   <br  />
   <%= f.label :company %>
   <%= f.text_field :company %>
@@ -25,11 +23,10 @@
   <%= f.label :website %>
   <%= f.url_field :website %>
   <br />
-  </div>
 
-  <%= f.hidden_field :category_id, :value => params[:id] %>
+  <%= f.hidden_field :category_id, :value => @category[1] %>
   <!-- Submits correct category with form -->
   
-  <%= f.submit "Create resource" %>
+  <%= f.submit "Create #{ @category[0] } resource" %>
  <% end %>
 </div>
