@@ -2,18 +2,18 @@ class ResourcesController < ApplicationController
   def show
     @resource = Resource.find(params[:id])
     @category_id = @resource.category_id
-    @category_name = Category.names.key(@category_id)
+    @category_name = Resource.names.key(@category_id)
   end
   
   def index
     @category_id = params[:category].to_i
-    @category_name = Category.names.key(@category_id)
+    @category_name = Resource.names.key(@category_id)
     @resources = Resource.where("category_id = ?", @category_id)
   end
 
   def new
     @category_id = params[:category].to_i
-    @category_name = Category.names.key(@category_id)
+    @category_name = Resource.names.key(@category_id)
     @resource = Resource.new
   end
 

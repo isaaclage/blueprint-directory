@@ -9,5 +9,6 @@ class CreateComments < ActiveRecord::Migration
     end
     add_foreign_key :comments, :users
     add_foreign_key :comments, :resources
+    add_index :comments, [:resource_id, :created_at]
   end
 end

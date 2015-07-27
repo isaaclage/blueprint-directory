@@ -11,5 +11,16 @@
   </ul>
 </div>
 
-    <%= link_to "#{ @category_name } Resources", resources_path(:category => @category_id) %>
+<%= link_to "#{ @category_name } Resources", resources_path(:category => @category_id) %>
+
+<%= link_to "Comment", new_comment_path(:resource => @resource.id) %>
+
+<div>
+  <% if @resource.comments.any? %>
+  <h3>Comments (<%= @resource.comments.count %>)</h3>
+  <ol>
+    <%= render @comments %>
+  </ol>
+  <% end %>
+</div>
 
