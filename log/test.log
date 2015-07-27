@@ -308,6 +308,7 @@ Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  begin transaction
+<<<<<<< HEAD
   [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "resources"[0m
   [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:44:05', '2015-07-20 14:44:05', 980190962)
   [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-20 14:44:05', '2015-07-20 14:44:05', 298486374)[0m
@@ -320,11 +321,21 @@ Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
 ResourceTest: test_should_be_valid
 ----------------------------------
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+=======
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 13:51:37', '2015-07-26 13:51:37', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 13:51:37', '2015-07-26 13:51:37', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 13:51:37', '2015-07-26 13:51:37', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 13:51:37', '2015-07-26 13:51:37', 298486374)
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 ------------------------------
 UserTest: test_should_be_valid
 ------------------------------
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+<<<<<<< HEAD
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "resources"[0m
@@ -350,10 +361,31 @@ ResourceTest: test_should_be_valid
 ----------------------------------
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
+=======
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-26 13:51:37 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 1194ms (Views: 1180.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
 -----------------------------------------------
 StaticPagesControllerTest: test_should_get_home
 -----------------------------------------------
 Processing by StaticPagesController#home as HTML
+<<<<<<< HEAD
   Rendered static_pages/home.html.erb within layouts/application (3.4ms)
 Completed 200 OK in 654ms (Views: 653.4ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
@@ -375,11 +407,42 @@ Completed 200 OK in 26ms (Views: 1.9ms | ActiveRecord: 0.0ms)
   [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:46:11', '2015-07-20 14:46:11', 980190962)[0m
   [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:46:11', '2015-07-20 14:46:11', 298486374)
   [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+=======
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 13:51:48', '2015-07-26 13:51:48', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 13:51:48', '2015-07-26 13:51:48', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 13:51:48', '2015-07-26 13:51:48', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 13:51:48', '2015-07-26 13:51:48', 298486374)
+  [1m[36m (10.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 266ms (Views: 265.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 ------------------------------
 UserTest: test_should_be_valid
 ------------------------------
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+<<<<<<< HEAD
   [1m[35m (0.2ms)[0m  begin transaction
 ---------------------------------
 SiteLayoutTest: test_layout_links
@@ -434,20 +497,48 @@ Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (4.9ms)
 Completed 200 OK in 659ms (Views: 658.4ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+=======
   [1m[35m (0.1ms)[0m  begin transaction
 ---------------------------------
 SiteLayoutTest: test_layout_links
 ---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-26 13:51:49 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 13:52:16', '2015-07-26 13:52:16', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 13:52:16', '2015-07-26 13:52:16', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 13:52:16', '2015-07-26 13:52:16', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 13:52:16', '2015-07-26 13:52:16', 298486374)
+  [1m[36m (12.4ms)[0m  [1mcommit transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2015-07-20 10:50:15 -0400
 Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 36ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/" for 127.0.0.1 at 2015-07-26 13:52:16 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 400ms (Views: 382.7ms | ActiveRecord: 0.0ms)
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
 ------------------------------
 UserTest: test_should_be_valid
 ------------------------------
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+<<<<<<< HEAD
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "resources"[0m
@@ -481,12 +572,52 @@ ResourceTest: test_email_should_be_present
 -----------------------------------------------
 ResourceTest: test_email_should_not_be_too_long
 -----------------------------------------------
+=======
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:10:20', '2015-07-26 14:10:20', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:10:20', '2015-07-26 14:10:20', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:10:20', '2015-07-26 14:10:20', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:10:20', '2015-07-26 14:10:20', 298486374)
+  [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 272ms (Views: 271.6ms | ActiveRecord: 0.0ms)
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
 -----------------------------------------------
 StaticPagesControllerTest: test_should_get_home
 -----------------------------------------------
 Processing by StaticPagesController#home as HTML
+<<<<<<< HEAD
   Rendered static_pages/home.html.erb within layouts/application (2.9ms)
 Completed 200 OK in 270ms (Views: 269.5ms | ActiveRecord: 0.0ms)
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
@@ -504,10 +635,21 @@ UserTest: test_should_be_valid
   [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:53:12', '2015-07-20 14:53:12', 980190962)[0m
   [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 14:53:12', '2015-07-20 14:53:12', 298486374)
   [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+=======
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 ---------------------------------
 SiteLayoutTest: test_layout_links
 ---------------------------------
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2015-07-20 10:53:12 -0400
 Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (2.8ms)
@@ -521,12 +663,34 @@ Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+=======
+Started GET "/" for 127.0.0.1 at 2015-07-26 14:10:21 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:10:54', '2015-07-26 14:10:54', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:10:54', '2015-07-26 14:10:54', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:10:54', '2015-07-26 14:10:54', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:10:54', '2015-07-26 14:10:54', 298486374)
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 ------------------------------
 UserTest: test_should_be_valid
 ------------------------------
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
+<<<<<<< HEAD
 -----------------------------------------
 ResourceTest: test_name_should_be_present
 -----------------------------------------
@@ -590,21 +754,62 @@ ResourceTest: test_should_be_valid
 ------------------------------
 UserTest: test_should_be_valid
 ------------------------------
+=======
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+Completed 500 Internal Server Error in 20ms
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
----------------------------------
-SiteLayoutTest: test_layout_links
----------------------------------
-Started GET "/" for 127.0.0.1 at 2015-07-20 10:55:01 -0400
-Processing by StaticPagesController#home as HTML
-  Rendered static_pages/home.html.erb within layouts/application (2.8ms)
-Completed 200 OK in 295ms (Views: 283.1ms | ActiveRecord: 0.0ms)
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 230ms (Views: 229.3ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
 -----------------------------------------------
 StaticPagesControllerTest: test_should_get_home
 -----------------------------------------------
 Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+<<<<<<< HEAD
+Started GET "/" for 127.0.0.1 at 2015-07-20 10:55:01 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 295ms (Views: 283.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+=======
+Started GET "/" for 127.0.0.1 at 2015-07-26 14:10:54 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:11:39', '2015-07-26 14:11:39', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:11:39', '2015-07-26 14:11:39', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:11:39', '2015-07-26 14:11:39', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:11:39', '2015-07-26 14:11:39', 298486374)
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+<<<<<<< HEAD
   Rendered static_pages/home.html.erb within layouts/application (0.2ms)
 Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
@@ -655,12 +860,42 @@ Started GET "/" for 127.0.0.1 at 2015-07-20 10:59:15 -0400
 Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (8.8ms)
 Completed 200 OK in 325ms (Views: 307.8ms | ActiveRecord: 0.0ms)
+=======
+  Rendered static_pages/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 252ms (Views: 251.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-26 14:11:40 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
 ------------------------------
 UserTest: test_should_be_valid
 ------------------------------
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+<<<<<<< HEAD
   [1m[35m (0.0ms)[0m  begin transaction
 -----------------------------------------------
 StaticPagesControllerTest: test_should_get_home
@@ -678,10 +913,27 @@ Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
   [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:00:26', '2015-07-20 15:00:26', 980190962)[0m
   [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:00:26', '2015-07-20 15:00:26', 298486374)
   [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:26:16', '2015-07-26 14:26:16', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:26:16', '2015-07-26 14:26:16', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:26:16', '2015-07-26 14:26:16', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:26:16', '2015-07-26 14:26:16', 298486374)
+  [1m[36m (11.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 ---------------------------------
 SiteLayoutTest: test_layout_links
 ---------------------------------
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2015-07-20 11:00:26 -0400
 Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (2.6ms)
@@ -717,12 +969,36 @@ ResourceTest: test_email_should_not_be_too_long
 ResourceTest: test_email_should_be_present
 ------------------------------------------
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+=======
+Started GET "/" for 127.0.0.1 at 2015-07-26 14:26:16 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 301ms (Views: 282.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 -----------------------------------------------
 StaticPagesControllerTest: test_should_get_home
 -----------------------------------------------
 Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+<<<<<<< HEAD
 Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.0ms)[0m  begin transaction
@@ -789,12 +1065,41 @@ Started GET "/" for 127.0.0.1 at 2015-07-20 11:09:25 -0400
 Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (4.4ms)
 Completed 200 OK in 643ms (Views: 611.4ms | ActiveRecord: 0.0ms)
+=======
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:30:42', '2015-07-26 14:30:42', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:30:42', '2015-07-26 14:30:42', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:30:42', '2015-07-26 14:30:42', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:30:42', '2015-07-26 14:30:42', 298486374)
+  [1m[36m (9.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 235ms (Views: 234.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
 -----------------------------------------------
 StaticPagesControllerTest: test_should_get_home
 -----------------------------------------------
 Processing by StaticPagesController#home as HTML
+<<<<<<< HEAD
   Rendered static_pages/home.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
@@ -807,12 +1112,18 @@ Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
   [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:18:09', '2015-07-20 15:18:09', 980190962)[0m
   [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:18:09', '2015-07-20 15:18:09', 298486374)
   [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+=======
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 ------------------------------
 UserTest: test_should_be_valid
 ------------------------------
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
+<<<<<<< HEAD
 -----------------------------------------------
 StaticPagesControllerTest: test_should_get_home
 -----------------------------------------------
@@ -941,6 +1252,46 @@ ResourceTest: test_name_should_be_present
 ResourceTest: test_should_be_valid
 ----------------------------------
   [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE "resources"."email" = 'resource@example.com' LIMIT 1
+=======
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-26 14:30:42 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:31:47', '2015-07-26 14:31:47', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:31:47', '2015-07-26 14:31:47', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:31:47', '2015-07-26 14:31:47', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:31:47', '2015-07-26 14:31:47', 298486374)
+  [1m[36m (10.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-07-26 14:31:47 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 299ms (Views: 285.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
 -----------------------------------------------
@@ -948,6 +1299,7 @@ StaticPagesControllerTest: test_should_get_home
 -----------------------------------------------
 Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+<<<<<<< HEAD
 Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
@@ -964,10 +1316,32 @@ UserTest: test_should_be_valid
   [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:22:42', '2015-07-20 15:22:42', 980190962)[0m
   [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:22:42', '2015-07-20 15:22:42', 298486374)
   [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+=======
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:32:26', '2015-07-26 14:32:26', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:32:26', '2015-07-26 14:32:26', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:32:26', '2015-07-26 14:32:26', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:32:26', '2015-07-26 14:32:26', 298486374)
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 ---------------------------------
 SiteLayoutTest: test_layout_links
 ---------------------------------
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2015-07-20 11:22:42 -0400
 Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (2.8ms)
@@ -1032,6 +1406,33 @@ ResourceTest: test_email_validation_should_accept_valid_addresses
 ResourceTest: test_name_should_not_be_too_long
 ----------------------------------------------
   [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+=======
+Started GET "/" for 127.0.0.1 at 2015-07-26 14:32:26 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 299ms (Views: 287.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.0ms)[0m  begin transaction
 -----------------------------------------------
@@ -1039,6 +1440,7 @@ StaticPagesControllerTest: test_should_get_home
 -----------------------------------------------
 Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+<<<<<<< HEAD
 Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
@@ -1136,11 +1538,25 @@ SQLite3::ConstraintException: UNIQUE constraint failed: resources.email: INSERT 
 UserTest: test_should_be_valid
 ------------------------------
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+=======
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:37:15', '2015-07-26 14:37:15', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:37:15', '2015-07-26 14:37:15', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:37:15', '2015-07-26 14:37:15', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:37:15', '2015-07-26 14:37:15', 298486374)
+  [1m[36m (12.9ms)[0m  [1mcommit transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 -----------------------------------------------
 StaticPagesControllerTest: test_should_get_home
 -----------------------------------------------
 Processing by StaticPagesController#home as HTML
+<<<<<<< HEAD
   Rendered static_pages/home.html.erb within layouts/application (5.0ms)
 Completed 200 OK in 630ms (Views: 629.6ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
@@ -1220,25 +1636,66 @@ ResourceTest: test_email_validation_should_reject_invalid_addresses
   [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:33:33', '2015-07-20 15:33:33', 980190962)[0m
   [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 15:33:33', '2015-07-20 15:33:33', 298486374)
   [1m[36m (4.1ms)[0m  [1mcommit transaction[0m
+=======
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 293ms (Views: 292.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 ---------------------------------
 SiteLayoutTest: test_layout_links
 ---------------------------------
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2015-07-20 11:33:34 -0400
 Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (3.2ms)
 Completed 200 OK in 373ms (Views: 357.6ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/" for 127.0.0.1 at 2015-07-26 14:37:15 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
 ------------------------------
 UserTest: test_should_be_valid
 ------------------------------
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+<<<<<<< HEAD
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:38:13', '2015-07-26 14:38:13', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:38:13', '2015-07-26 14:38:13', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:38:13', '2015-07-26 14:38:13', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:38:13', '2015-07-26 14:38:13', 298486374)
+  [1m[36m (10.3ms)[0m  [1mcommit transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 -----------------------------------------------
 StaticPagesControllerTest: test_should_get_home
 -----------------------------------------------
 Processing by StaticPagesController#home as HTML
+<<<<<<< HEAD
   Rendered static_pages/home.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
@@ -1374,10 +1831,32 @@ ResourceTest: test_should_be_valid
 ----------------------------------
   [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+=======
+  Rendered static_pages/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 305ms (Views: 304.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 ---------------------------------
 SiteLayoutTest: test_layout_links
 ---------------------------------
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2015-07-20 12:53:55 -0400
 Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (3.2ms)
@@ -1398,11 +1877,19 @@ Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
   [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 16:55:44', '2015-07-20 16:55:44', 980190962)[0m
   [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-20 16:55:44', '2015-07-20 16:55:44', 298486374)
   [1m[36m (40.8ms)[0m  [1mcommit transaction[0m
+=======
+Started GET "/" for 127.0.0.1 at 2015-07-26 14:38:13 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 ------------------------------
 UserTest: test_should_be_valid
 ------------------------------
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+<<<<<<< HEAD
   [1m[35m (0.0ms)[0m  begin transaction
 -----------------------------------------------
 StaticPagesControllerTest: test_should_get_home
@@ -1411,10 +1898,22 @@ Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (2.7ms)
 Completed 200 OK in 268ms (Views: 267.9ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:38:51', '2015-07-26 14:38:51', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-07-26 14:38:51', '2015-07-26 14:38:51', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:38:51', '2015-07-26 14:38:51', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "category", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2015-07-26 14:38:51', '2015-07-26 14:38:51', 298486374)
+  [1m[36m (11.4ms)[0m  [1mcommit transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
   [1m[35m (0.1ms)[0m  begin transaction
 ---------------------------------
 SiteLayoutTest: test_layout_links
 ---------------------------------
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2015-07-20 12:55:44 -0400
 Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (0.3ms)
@@ -1553,10 +2052,19 @@ ResourceTest: test_email_should_not_be_too_long
   [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.0ms)[0m  begin transaction
+=======
+Started GET "/" for 127.0.0.1 at 2015-07-26 14:38:51 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 292ms (Views: 279.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
 -----------------------------------------------
 StaticPagesControllerTest: test_should_get_home
 -----------------------------------------------
 Processing by StaticPagesController#home as HTML
+<<<<<<< HEAD
   Rendered static_pages/home.html.erb within layouts/application (5.1ms)
 Completed 200 OK in 552ms (Views: 552.0ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
@@ -1750,3 +2258,29 @@ ResourceTest: test_email_should_be_present
 ------------------------------------------
   [1m[36mResource Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('  ') LIMIT 1[0m
   [1m[35m (0.1ms)[0m  rollback transaction
+=======
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+>>>>>>> ed1f0adadd33f6e2f6013d28a21f240abc416eee
