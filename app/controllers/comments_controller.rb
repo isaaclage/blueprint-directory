@@ -4,9 +4,9 @@ class CommentsController < ApplicationController
     @resource = Resource.find(params[:id])
     @comments = @resource.comments
   end
-  
+
   def new
-    @resource = Resource.find_by(id: params[:resource])
+    @resource = Resource.find(params[:resource])
     @comment = Comment.new
   end
 
