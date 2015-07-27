@@ -1,7 +1,5 @@
 <% provide(:title, @category_name) %>
 
-<%= @category %>
-
 <div>
   <ul>
     <li><%= @resource.name %></li>
@@ -13,5 +11,5 @@
   </ul>
 </div>
 
-    <%= link_to "#{ @category_name } Resources", resources_path(:category => @category) %>
+    <%= link_to "#{ @category_name } Resources", resources_path(:category => @category_id) %>
 

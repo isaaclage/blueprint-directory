@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
   
   def home
-    @categories = Category.names
+    @categories = Resource.names
   end
   
   def help

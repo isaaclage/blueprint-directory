@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   resources :resources
+  resources :comments
   
   root 'static_pages#home'
   get  'static_pages/help'

@@ -1,7 +1,8 @@
 class ResourcesController < ApplicationController
   def show
     @resource = Resource.find(params[:id])
-    @category_name = Category.names.key(@resource.category_id)
+    @category_id = @resource.category_id
+    @category_name = Category.names.key(@category_id)
   end
   
   def index

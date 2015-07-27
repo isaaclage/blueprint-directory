@@ -1,5 +1,5 @@
 class Resource < ActiveRecord::Base
-  belongs_to :category
+    enum names: [ "Legal", "Accounting", "UI/UX Design", "Technology and Development", "Security and Compliance", "Venture Capital", "Industry", "Sales", "Marketing", "Human Resources" ]
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
