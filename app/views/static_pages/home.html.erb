@@ -3,7 +3,7 @@
 
     <% @categories.each do |category| %>
 
-    <%= link_to "#{ category[0] } Resources", resources_path(:category => category) %>
+    <%= link_to "#{ category[0] } Resources", resources_path(:category => category[1]) %>
     <br />
 
     <% end %>

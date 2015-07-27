@@ -1,0 +1,13 @@
+require 'test_helper'
+
+class ResourcesInterfaceTest < ActionDispatch::IntegrationTest
+
+  def setup
+    @user = users(:name)
+  end
+
+  test "resource interface" do
+
+  end
+    
+end

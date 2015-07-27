@@ -1,14 +1,17 @@
-<h1><%= @category [0] %> Resources Index</h1>
+<% provide(:title, @category_name) %>
+
+<h1><%= @category_name %> Resources Index</h1>
 
 <br />
-<%= @resources.each do |resource| %>
-<%= resource.name %>
+<% @resources.each do |resource| %>
+<%= link_to resource.name, resource %>
 <%= resource.email %>
-<%= resource.category %>
 <br />
 
 <% end %>
 
-<%= link_to "Create a New #{ @category[0] } Resource", new_resource_path(:category => @category) %>
+<br />
+
+<%= link_to "Create a New #{ @category_name } Resource", new_resource_path(:category => @category_id) %>
 
 

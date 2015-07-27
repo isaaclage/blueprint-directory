@@ -6,4 +6,5 @@ class Resource < ActiveRecord::Base
   #Is this the best email regex to use? Doesn't stop ..
   validates :email, presence: true, length: { maximum: 255 },
             format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
+  validates :category_id, presence: true
 end

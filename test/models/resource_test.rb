@@ -3,7 +3,7 @@ require 'test_helper'
 class ResourceTest < ActiveSupport::TestCase
 
   def setup
-    @resource = Resource.new(name: "Example Resource", email: "resource@example.com")
+    @resource = Resource.new(name: "Example Resource", email: "resource@example.com", category_id: 0)
   end
                              
   test "should be valid" do
@@ -17,6 +17,11 @@ class ResourceTest < ActiveSupport::TestCase
 
   test "email should be present" do
     @resource.email = "  "
+    assert_not @resource.valid?
+  end
+
+  test "category id should be present" do
+    @resource.category_id = " "
     assert_not @resource.valid?
   end
 

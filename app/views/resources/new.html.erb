@@ -1,4 +1,6 @@
-<h1>Add <%= @category[0] %> resource</h1>
+<% provide(:title, @category_name) %>
+
+<h1>Add <%= @category_name %> resource</h1>
 
 <div>
   <div>
@@ -24,9 +26,9 @@
   <%= f.url_field :website %>
   <br />
 
-  <%= f.hidden_field :category_id, :value => @category[1] %>
+  <%= f.hidden_field :category_id, :value => @category_id %>
   <!-- Submits correct category with form -->
   
-  <%= f.submit "Create #{ @category[0] } resource" %>
+  <%= f.submit "Create #{ @category_name } resource" %>
  <% end %>
 </div>

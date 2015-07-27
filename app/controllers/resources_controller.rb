@@ -1,20 +1,22 @@
 class ResourcesController < ApplicationController
   def show
     @resource = Resource.find(params[:id])
+    @category_name = Category.names.key(@resource.category_id)
   end
   
   def index
-    @category = params[:category]
-    @resources = Resource.where("category_id = ?", @category[1])
+    @category_id = params[:category].to_i
+    @category_name = Category.names.key(@category_id)
+    @resources = Resource.where("category_id = ?", @category_id)
   end
 
   def new
-    @category = params[:category]
+    @category_id = params[:category].to_i
+    @category_name = Category.names.key(@category_id)
     @resource = Resource.new
   end
 
   def create
-    @category = params[:category]
     @resource = Resource.new(resource_params)
     if @resource.save
       redirect_to @resource
