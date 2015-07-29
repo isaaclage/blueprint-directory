@@ -1,13 +1,24 @@
 <h1>Comment</h1>
 
-<%= @resource.name %>
+<%= @resource.inspect %>
 
 <div>
   <%= form_for @comment, url: {action: "create" } do |f| %>
+
   <%= f.label :Comment %>
   <%= f.text_field :content %>
+  <br />
 
-  <%= f.hidden_field :resource_id, :value => @resource.id %>
+  <%= f.label :Rating %>
+  <%= radio_button :comment, :rating, 1 %>
+  <%= radio_button :comment, :rating, 2 %>
+  <%= radio_button :comment, :rating, 3 %>
+  <%= radio_button :comment, :rating, 4 %>
+  <%= radio_button :comment, :rating, 5 %>
+  <br />  
+
+  <%= @resource_id %>
+  <%= f.hidden_field :id, :value =>  @resource_id %>
   <!-- Submits correct resource with form -->
   
   <%= f.submit "Comment" %>

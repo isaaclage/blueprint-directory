@@ -1,5 +1,6 @@
-<li>
-  <%= link_to comment.resource.name, comment.resource %>
-  <%= comment.content %>
-  Posted <%= time_ago_in_words(micropost.created_at %> ago
+<li id="comment-<%= comment.id %>">
+ <!-- <%= link_to comment.resource.name, comment.resource %> -->
+ <%= comment.content %>
+ <br />
+ Rating: <%= comment.rating %> stars
 </li>

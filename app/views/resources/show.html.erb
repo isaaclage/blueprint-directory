@@ -12,9 +12,26 @@
 </div>
 
 <%= link_to "#{ @category_name } Resources", resources_path(:category => @category_id) %>
+<br />
 
-<%= link_to "Comment", new_comment_path(:resource => @resource) %>
+<div>
+<%= form_for([@resource, @resource.comments.build]) do |f| %>
+  <%= f.label :Comment %>
+  <%= f.text_field :content, placeholder: "Add your comment here..." %>
+   <br />
 
+   <%= f.label :Rating %>
+   <%= radio_button :comment, :rating, 1 %>
+   <%= radio_button :comment, :rating, 2 %>
+   <%= radio_button :comment, :rating, 3 %>
+   <%= radio_button :comment, :rating, 4 %>
+   <%= radio_button :comment, :rating, 5 %>
+   <br />  
+  
+  <%= f.submit "Comment" %>
+  <% end %>
+</div>
+  
 <div>
   <% if @resource.comments.any? %>
   <h3>Comments (<%= @resource.comments.count %>)</h3>
@@ -23,4 +40,3 @@
   </ol>
   <% end %>
 </div>
-

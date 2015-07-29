@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   
-  resources :resources
-  resources :comments
+  resources :resources do
+    resources :comments, only: [:create, :destroy]
+  end
   
   root 'static_pages#home'
   get  'static_pages/help'
