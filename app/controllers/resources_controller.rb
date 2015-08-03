@@ -3,7 +3,7 @@ class ResourcesController < ApplicationController
     @resource = Resource.find(params[:id])
     @category_id = @resource.category_id
     @category_name = Resource.names.key(@category_id)
-    @comments = @resource.comments
+    @comments = @resource.comments.all
   end
   
   def index

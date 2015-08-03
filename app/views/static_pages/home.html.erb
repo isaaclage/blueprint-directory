@@ -1,20 +1,19 @@
 <% provide(:title, "Home") %>
-<br />
-<h1>Resource Categories</h1>
 
 <ul class = "categories">
   <% @categories.each do |category| %>
   <li>
-    <div class = "big_circle">
-      <div class = "category_link">
-	<p><%= link_to category[0], resources_path(:category => category[1]) %></p>
+    <%= link_to resources_path(:category => category[1]) do %>
+      <div class = "big_circle">
+	  <%= image_tag("#{ category[0] }.png") %>
+	  <p><%= category[0] %></p>
       </div>
-    </div>
-    <div class = "little_circle">
+      <% end %>
+      <div class = "new_resource_link">
       <%= link_to new_resource_path(:category => category[1]) do %>
         <p>+</p>
-      <% end %>
-    </div>
+	<% end %>
+	</div>
   </li>
   <% end %>
 </ul>

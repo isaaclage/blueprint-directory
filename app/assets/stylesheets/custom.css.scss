@@ -42,36 +42,39 @@ body {
     }
 
 .big_circle {
-    margin: auto;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: thick solid #5f99d0;
-    .category_link {
-      margin: -5px;
-      text-align: center;
-      height: 150px;
-      width: 150px;
-      display: table;
-        p {
-	display: table-cell;
-	vertical-align: middle;
+    border-width: 2px;
+    border: solid #5f99d0;
+      img {
+	display: block;
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+      }
+      p {
+	margin-top: 10px;
 	text-align: center;
-	}
       }
     }
 
-.little_circle {
+.new_resource_link {
+    margin-top: -20px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: thick solid #5f99d0;
+    border-width: 2px;
+    border: solid #5f99d0;
+    background-color: #ffffff;
      p {
-       margin-top: -8px;
-       margin-left: auto;
+       position: relative;
+       margin-top: -5px;
        text-align: center;
        font-size: 36px;
    }
