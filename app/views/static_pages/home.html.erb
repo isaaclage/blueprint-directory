@@ -1,9 +1,21 @@
 <% provide(:title, "Home") %>
-<h1>This is our directory's home page!<h1>
+<br />
+<h1>Resource Categories</h1>
 
-    <% @categories.each do |category| %>
+<ul class = "categories">
+  <% @categories.each do |category| %>
+  <li>
+    <div class = "big_circle">
+      <div class = "category_link">
+	<p><%= link_to category[0], resources_path(:category => category[1]) %></p>
+      </div>
+    </div>
+    <div class = "little_circle">
+      <%= link_to new_resource_path(:category => category[1]) do %>
+        <p>+</p>
+      <% end %>
+    </div>
+  </li>
+  <% end %>
+</ul>
 
-    <%= link_to "#{ category[0] } Resources", resources_path(:category => category[1]) %>
-    <br />
-
-    <% end %>

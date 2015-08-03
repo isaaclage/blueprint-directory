@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <header class="navbar navbar-fixed-top">
+    <div class="container">
+      <%= link_to image_tag("bp_logo.png", alt: "Blueprint Health logo"), 'https://blueprint-directory.herokuapp.com/', class: "navbar-left" %>
+      <%= link_to "Nexudus", 'https://blueprinthealthcowork.spaces.nexudus.com/en', class: " navbar-right" %>
+    </div>
+  </header>
+  <div class="container">
+    <%= yield %>
+  </div>
 
 <%= debug(params) if Rails.env.development? %>
 </body>

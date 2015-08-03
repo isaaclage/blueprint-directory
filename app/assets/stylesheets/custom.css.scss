@@ -1,0 +1,80 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+
+body {
+  padding-top: 60px;
+  z-index: 5;
+}
+
+/* header */
+
+.navbar {
+  border-bottom: thick solid #000000;
+  background: #ffffff;
+  z-index: 10;
+}
+
+.navbar-left {
+  margin: 15px;
+}
+
+.navbar-right {
+  margin: 15px;
+  font-size: 28px;
+}
+
+/* Category List */
+
+.categories {
+  list-style: none;
+  margin: 10px;
+    li {
+      text-align: center;
+      display: inline-block;
+      overflow: auto;
+      padding: 10px;
+      width: 200px;
+      height: 250px
+      }
+    }
+
+.big_circle {
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: thick solid #5f99d0;
+    .category_link {
+      margin: -5px;
+      text-align: center;
+      height: 150px;
+      width: 150px;
+      display: table;
+        p {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	}
+      }
+    }
+
+.little_circle {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: thick solid #5f99d0;
+     p {
+       margin-top: -8px;
+       margin-left: auto;
+       text-align: center;
+       font-size: 36px;
+   }
+ }
+
+      
