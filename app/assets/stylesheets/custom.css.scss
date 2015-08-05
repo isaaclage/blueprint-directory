@@ -84,3 +84,19 @@ body {
 .left-align {
   display: block;
   }
+
+/* Show resource */
+
+#container {
+  width: 100%;
+  .top {
+  padding: 60px;
+  vertical-align: top;
+  ul{
+    list-style-type: none;
+    }
+  }
+  .bottom {
+    width: 100%;
+  }
+}

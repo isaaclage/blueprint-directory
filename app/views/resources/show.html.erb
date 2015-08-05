@@ -1,31 +1,41 @@
 <% provide(:title, @category_name) %>
-
-<div>
-  <br />
-  <br />
-  <ul>
-    <li><%= @resource.name %></li>
-    <li><%= @resource.email %></li>
-    <li><%= @resource.position %></li>
-    <li><%= @resource.location %></li>
-    <li><%= @resource.company %></li>
-    <li><%= @resource.website %></li>
-  </ul>
-</div>
-
-<%= link_to "#{ @category_name } Resources", resources_path(:category => @category_id) %>
 <br />
+<h3><%= @category_name %></h3>
+<table id="container">
+<tr class="top">
+<td>
+<ul>
+<li>Name:  <%= @resource.name %></li>
+<li>Email:  <%= @resource.email %></li>
+<li>Position:  <%= @resource.position %></li>
+<li>Location:  <%= @resource.location %></li>
+<li>Company:  <%= @resource.company %></li>
+<li>Website:  <%= @resource.website %></li>
+</ul>
+</td>
 
-<div>
-  <%= render "shared/comment_form" %>
-</div>
-  
-<div>
-  <% if @resource.comments.any? %>
-  <h3>Comments (<%= @resource.comments.count %>)</h3>
-  <ol>
-    <%= render @comments %>
-  </ol>
-  <% end %>
-</div>
+<td>
+<%= render "shared/comment_form" %>
+</td>
+</tr>
+
+<tr class="bottom">
+<td>
+<% if @resource.comments.any? %>
+<h4>Comments (<%= @resource.comments.count %>)</h4>
+<ol>
+<%= render @comments %>
+</ol>
+<% end %>
+<br />
+</td>
+</tr>
+
+<tr class="bottom">
+<td>
+<%= link_to "#{ @category_name } Resources", resources_path(:category => @category_id) %>
+</td>
+</tr>
+</table>
+
 
