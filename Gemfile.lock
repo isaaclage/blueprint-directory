@@ -202,7 +202,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt (= 3.1.7)
+  bcrypt (~> 3.1.7)
   bootstrap-sass (= 3.3.5.0)
   byebug (= 3.4.0)
   coffee-rails (= 4.1.0)

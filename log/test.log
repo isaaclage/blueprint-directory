@@ -5368,3 +5368,823 @@ Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (1.3ms)
 Completed 200 OK in 36ms (Views: 2.8ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "comments"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2015-08-05 16:03:21 UTC', '2015-08-05 16:13:21', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2012-08-05 16:13:21 UTC', '2015-08-05 16:13:21', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2015-08-05 14:13:21 UTC', '2015-08-05 16:13:21', 113629430)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2015-08-05 16:13:21 UTC', '2015-08-05 16:13:21', 941832919)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "created_at", "updated_at", "id") VALUES ('name', 'name@email.com', '2015-08-05 16:13:21', '2015-08-05 16:13:21', 505642503)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-08-05 16:13:21', '2015-08-05 16:13:21', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('name', 'name@email.com', '2015-08-05 16:13:21', '2015-08-05 16:13:21', 505642503)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-08-05 16:13:21', '2015-08-05 16:13:21', 298486374)[0m
+  [1m[35m (4.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 9372ms (Views: 9371.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (336.5ms)
+Completed 200 OK in 344ms (Views: 343.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+ResourcesInterfaceTest: test_resource_interface
+-----------------------------------------------
+  [1m[35mUser Load (17.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+CommentTest: test_content_should_be_present
+-------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35mResource Load (0.1ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------
+CommentTest: test_associated_comments_should_be_destroyed
+---------------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35mResource Load (0.1ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE (LOWER("resources"."email") = LOWER('name@email.com') AND "resources"."id" != 505642503) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+CommentTest: test_order_should_be_most_recent_first
+---------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36mResource Load (0.0ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 941832919]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments"  ORDER BY "comments"."created_at" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+CommentTest: test_resource_id_should_be_present
+-----------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36mResource Load (0.0ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------
+CommentTest: test_should_be_valid
+---------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36mResource Load (0.0ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------
+ResourceTest: test_email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example,com') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource_at_foo.org') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource.name@example.') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+ResourceTest: test_category_id_should_be_present
+------------------------------------------------
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('  ') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------
+ResourceTest: test_email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('RESOURCE@foo.COM') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('A_US-ER@foo.bar.org') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('first.last@foo.jp') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('alic+bob@baz.cn') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+ResourceTest: test_email_addresses_should_be_unique
+---------------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "resources" ("name", "email", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Example Resource"], ["email", "resource@example.com"], ["category_id", 0], ["created_at", "2015-08-05 16:13:32.391206"], ["updated_at", "2015-08-05 16:13:32.391206"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('RESOURCE@EXAMPLE.COM') LIMIT 1
+  [1m[36m (18.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-08-05 12:13:32 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 45ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+UserTest: test_name_should_not_be_too_long
+------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_email_should_not_be_too_long
+-------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (15.8ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "resource_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rating" integer) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (2.4ms)[0m  [1mCREATE  INDEX "index_comments_on_resource_id" ON "comments" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_resource_id' AND type='index'
+
+  [1m[36m (2.5ms)[0m  [1mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" varchar, "location" varchar, "company" varchar, "website" varchar, "category_id" integer) 
+  [1m[36m (2.4ms)[0m  [1mCREATE UNIQUE INDEX "index_resources_on_email" ON "resources" ("email")[0m
+  [1m[35m (2.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar) 
+  [1m[36m (2.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (28.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (4.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150805162253')[0m
+  [1m[35m (3.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150715180015')
+  [1m[36m (3.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150715182311')[0m
+  [1m[35m (2.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150720152501')
+  [1m[36m (2.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150720173242')[0m
+  [1m[35m (3.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150722184954')
+  [1m[36m (3.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150722203030')[0m
+  [1m[35m (3.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150722204048')
+  [1m[36m (3.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150727174340')[0m
+  [1m[35m (2.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150727180707')
+  [1m[36m (3.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150727181018')[0m
+  [1m[35m (3.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150729141058')
+  [1m[36m (3.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150805161752')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "comments"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2015-08-05 16:18:09 UTC', '2015-08-05 16:28:09', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2012-08-05 16:28:09 UTC', '2015-08-05 16:28:09', 298486374)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2015-08-05 14:28:09 UTC', '2015-08-05 16:28:09', 113629430)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2015-08-05 16:28:09 UTC', '2015-08-05 16:28:09', 941832919)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "created_at", "updated_at", "id") VALUES ('name', 'name@email.com', '2015-08-05 16:28:09', '2015-08-05 16:28:09', 505642503)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-08-05 16:28:09', '2015-08-05 16:28:09', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('name', 'name@email.com', '2015-08-05 16:28:09', '2015-08-05 16:28:09', 505642503)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-08-05 16:28:09', '2015-08-05 16:28:09', 298486374)[0m
+  [1m[35m (4.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('  ') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+ResourceTest: test_category_id_should_be_present
+------------------------------------------------
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------
+ResourceTest: test_email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example,com') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource_at_foo.org') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource.name@example.') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('foo@bar_baz.com') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('foo@bar+baz.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[35mResource Exists (0.3ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------
+ResourceTest: test_email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('RESOURCE@foo.COM') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('A_US-ER@foo.bar.org') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('first.last@foo.jp') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('alic+bob@baz.cn') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+ResourcesInterfaceTest: test_resource_interface
+-----------------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------
+CommentTest: test_order_should_be_most_recent_first
+---------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35mResource Load (0.2ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 941832919]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments"  ORDER BY "comments"."created_at" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+CommentTest: test_content_should_be_present
+-------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35mResource Load (0.0ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-----------------------------------------------
+CommentTest: test_resource_id_should_be_present
+-----------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35mResource Load (0.0ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------
+CommentTest: test_associated_comments_should_be_destroyed
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35mResource Load (0.0ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE (LOWER("resources"."email") = LOWER('name@email.com') AND "resources"."id" != 505642503) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------
+CommentTest: test_should_be_valid
+---------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36mResource Load (0.1ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+UserTest: test_name_should_not_be_too_long
+------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+UserTest: test_email_should_not_be_too_long
+-------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_be_present_(nonblank)
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------
+UserTest: test_email_validation_should_reject_invalid_addresses
+---------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_have_a_minimum_length
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-08-05 12:28:10 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (297.8ms)
+Completed 200 OK in 1157ms (Views: 1127.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "comments"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2015-08-05 16:27:26 UTC', '2015-08-05 16:37:26', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2012-08-05 16:37:26 UTC', '2015-08-05 16:37:26', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2015-08-05 14:37:26 UTC', '2015-08-05 16:37:26', 113629430)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2015-08-05 16:37:26 UTC', '2015-08-05 16:37:26', 941832919)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "created_at", "updated_at", "id") VALUES ('name', 'name@email.com', '2015-08-05 16:37:26', '2015-08-05 16:37:26', 505642503)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-08-05 16:37:26', '2015-08-05 16:37:26', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('name', 'name@email.com', '2015-08-05 16:37:26', '2015-08-05 16:37:26', 505642503)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-08-05 16:37:26', '2015-08-05 16:37:26', 298486374)[0m
+  [1m[35m (4.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------
+UserTest: test_email_validation_should_reject_invalid_addresses
+---------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+UserTest: test_name_should_not_be_too_long
+------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+UserTest: test_email_should_not_be_too_long
+-------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_be_present_(nonblank)
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_have_a_minimum_length
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+ResourceTest: test_category_id_should_be_present
+------------------------------------------------
+  [1m[35mResource Exists (0.3ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------
+ResourceTest: test_email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example,com') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource_at_foo.org') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource.name@example.') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('  ') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------------------------
+ResourceTest: test_email_addresses_should_be_unique
+---------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Example Resource"], ["email", "resource@example.com"], ["category_id", 0], ["created_at", "2015-08-05 16:37:26.748021"], ["updated_at", "2015-08-05 16:37:26.748021"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('RESOURCE@EXAMPLE.COM') LIMIT 1[0m
+  [1m[35m (28.8ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------
+ResourceTest: test_email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('RESOURCE@foo.COM') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('A_US-ER@foo.bar.org') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('first.last@foo.jp') LIMIT 1
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('alic+bob@baz.cn') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-08-05 12:37:27 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (282.0ms)
+Completed 200 OK in 1188ms (Views: 1161.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+ResourcesInterfaceTest: test_resource_interface
+-----------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+CommentTest: test_content_should_be_present
+-------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36mResource Load (0.1ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------
+CommentTest: test_associated_comments_should_be_destroyed
+---------------------------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36mResource Load (0.1ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE (LOWER("resources"."email") = LOWER('name@email.com') AND "resources"."id" != 505642503) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+CommentTest: test_should_be_valid
+---------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35mResource Load (0.1ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+CommentTest: test_resource_id_should_be_present
+-----------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35mResource Load (0.0ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------
+CommentTest: test_order_should_be_most_recent_first
+---------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35mResource Load (0.0ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 941832919]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments"  ORDER BY "comments"."created_at" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 7ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "comments"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2015-08-05 16:32:29 UTC', '2015-08-05 16:42:29', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2012-08-05 16:42:29 UTC', '2015-08-05 16:42:29', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2015-08-05 14:42:29 UTC', '2015-08-05 16:42:29', 113629430)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "updated_at", "id") VALUES ('MyText', '2015-08-05 16:42:29 UTC', '2015-08-05 16:42:29', 941832919)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "resources"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "resources" ("name", "email", "created_at", "updated_at", "id") VALUES ('name', 'name@email.com', '2015-08-05 16:42:29', '2015-08-05 16:42:29', 505642503)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "resources" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-08-05 16:42:29', '2015-08-05 16:42:29', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('name', 'name@email.com', '2015-08-05 16:42:29', '2015-08-05 16:42:29', 505642503)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-08-05 16:42:29', '2015-08-05 16:42:29', 298486374)[0m
+  [1m[35m (39.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+UserTest: test_name_should_not_be_too_long
+------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('     ') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------
+UserTest: test_password_should_have_a_minimum_length
+----------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+UserTest: test_email_should_not_be_too_long
+-------------------------------------------
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+UserTest: test_email_validation_should_reject_invalid_addresses
+---------------------------------------------------------------
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example,com') LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user_at_foo.org') LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user.name@example.') LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar_baz.com') LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar+baz.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_be_present_(nonblank)
+----------------------------------------------------
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 476ms (Views: 475.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 65ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------
+ResourceTest: test_should_be_valid
+----------------------------------
+  [1m[35mResource Exists (0.3ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------
+ResourceTest: test_email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example,com') LIMIT 1[0m
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource_at_foo.org') LIMIT 1
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource.name@example.') LIMIT 1[0m
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('foo@bar_baz.com') LIMIT 1
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('foo@bar+baz.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+ResourceTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------
+ResourceTest: test_email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('RESOURCE@foo.COM') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('A_US-ER@foo.bar.org') LIMIT 1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('first.last@foo.jp') LIMIT 1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('alic+bob@baz.cn') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+ResourceTest: test_email_should_be_present
+------------------------------------------
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('  ') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------
+ResourceTest: test_email_addresses_should_be_unique
+---------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mResource Exists (0.1ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "resources" ("name", "email", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Example Resource"], ["email", "resource@example.com"], ["category_id", 0], ["created_at", "2015-08-05 16:42:30.029349"], ["updated_at", "2015-08-05 16:42:30.029349"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mResource Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('RESOURCE@EXAMPLE.COM') LIMIT 1[0m
+  [1m[35m (61.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+ResourceTest: test_category_id_should_be_present
+------------------------------------------------
+  [1m[35mResource Exists (0.3ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+ResourceTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('resource@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+ResourceTest: test_email_should_not_be_too_long
+-----------------------------------------------
+  [1m[35mResource Exists (0.2ms)[0m  SELECT  1 AS one FROM "resources" WHERE LOWER("resources"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+ResourcesInterfaceTest: test_resource_interface
+-----------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+CommentTest: test_resource_id_should_be_present
+-----------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+CommentTest: test_content_should_be_present
+-------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36mResource Load (0.0ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------
+CommentTest: test_associated_comments_should_be_destroyed
+---------------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36mResource Load (0.0ms)[0m  [1mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mResource Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "resources" WHERE (LOWER("resources"."email") = LOWER('name@email.com') AND "resources"."id" != 505642503) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+CommentTest: test_should_be_valid
+---------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35mResource Load (0.1ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------
+CommentTest: test_order_should_be_most_recent_first
+---------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 505642503]]
+  [1m[35mResource Load (0.0ms)[0m  SELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT 1  [["id", 505642503]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 941832919]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments"  ORDER BY "comments"."created_at" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-08-05 12:42:30 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 30ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
