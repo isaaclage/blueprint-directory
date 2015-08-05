@@ -19,7 +19,7 @@ class ResourcesController < ApplicationController
   end
 
   def create
-    @resource = Resource.new(resource_params)
+    @resource = Resource.create(resource_params)
     if @resource.save
       redirect_to @resource
     else
