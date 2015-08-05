@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20150805162253) do
     t.integer  "rating"
   end
 
+  add_index "comments", ["resource_id", "created_at"], name: "index_comments_on_resource_id_and_created_at"
   add_index "comments", ["resource_id"], name: "index_comments_on_resource_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 

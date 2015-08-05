@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  resources :users
   
   resources :resources do
     resources :comments, only: [:create, :destroy]

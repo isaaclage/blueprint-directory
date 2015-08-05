@@ -1,0 +1,29 @@
+<% provide(:title, 'Sign up') %>
+
+<div class="padding">
+    <%= form_for(@user) do |f| %>
+    
+    <%= f.label :name %>
+    <div>
+      <%= f.text_field :name %>
+    </div>
+
+    <%= f.label :email %>
+    <div>
+      <%= f.email_field :email %>
+    </div>
+
+    <%= f.label :password %>
+    <div>
+      <%= f.password_field :password %>
+    </div>
+
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <div>
+      <%= f.password_field :password_confirmation %>
+    </div>
+    <br />
+
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <% end %>
+</div>
