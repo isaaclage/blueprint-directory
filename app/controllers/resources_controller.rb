@@ -20,6 +20,7 @@ class ResourcesController < ApplicationController
 
   def create
     @resource = Resource.new(resource_params)
+    @comment = @resource.comments.create(comment_params)
     if @resource.save
       redirect_to @resource
     else
@@ -29,8 +30,12 @@ class ResourcesController < ApplicationController
 
   private
 
-  def resource_params
-    params.require(:resource).permit(:name, :email, :position, :location, :company, :website, :category_id)
-  end
+    def resource_params
+      params.require(:resource).permit(:name, :email, :position, :location, :company, :website, :category_id)
+    end
+
+    def comment_params
+      params.require(:comment).permit(:content, :rating)
+    end
   
 end

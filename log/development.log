@@ -26707,3 +26707,13 @@ Started GET "/assets/UI%20and%20UX%20Design-4fef2855993de4d38e103130ec84b8a10058
 
 
 Started GET "/assets/Technology%20Development-17e4443f4a8d024d9d1db6b7a99338d8fabe34b45ec6ab17981da3d18a9a867d.png" for ::1 at 2015-08-03 16:11:17 -0400
+
+
+Started GET "/" for ::1 at 2015-08-05 10:10:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (954.4ms)
+Completed 200 OK in 8994ms (Views: 8891.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-5730afd2c19de0c57f5b70caba5fe0368fc371f84a29f06b4b57e8f842b7cf64.css?body=1" for ::1 at 2015-08-05 10:10:47 -0400

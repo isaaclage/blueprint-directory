@@ -2,32 +2,40 @@
 
 <h1>Add <%= @category_name %> resource</h1>
 
-<div>
- <%= form_for @resource, url: { action: "create" } do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br />
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <br />
-  <%= f.label :position %>
-  <%= f.text_field :position %>
-  <br />
-  <%= f.label :location %>
-  <%= f.text_field :location %>
-  <br />
 
-  <br  />
+<div class="left-align">
+  <%= form_for @resource, url: { action: "create" } do |f| %>
+  <%= f.label :name %>
+  <div class="form-field">
+    <%= f.text_field :name %>
+  </div>
+  <%= f.label :email %>
+  <div class="form-field">
+    <%= f.email_field :email %>
+  </div>
+  <%= f.label :position %>
+  <div class="form-field">
+  <%= f.text_field :position %>
+  </div>
+  <%= f.label :location %>
+  <div class="form-field">
+  <%= f.text_field :location %>
+  </div>
   <%= f.label :company %>
+  <div class="form-field">
   <%= f.text_field :company %>
-  <br />
+  </div>
   <%= f.label :website %>
+  <div class="form-field">
   <%= f.url_field :website %>
-  <br />
+  </div>
 
   <%= f.hidden_field :category_id, :value => @category_id %>
   <!-- Submits correct category with form -->
-  
-  <%= f.submit "Create #{ @category_name } resource" %>
- <% end %>
+
+  <div>
+    <br />
+    <%= f.submit "Create #{ @category_name } resource" %>
+  </div>
+  <% end %>
 </div>
