@@ -18,8 +18,11 @@
   <br />  
 
   <%= @resource_id %>
-  <%= f.hidden_field :id, :value =>  @resource_id %>
+  <%= f.hidden_field :resource_id, :value =>  @resource_id %>
   <!-- Submits correct resource with form -->
+
+  <%= @user_id %>
+  <%= f.hidden_field :user_id :value => @user.id %>
   
   <%= f.submit "Comment" %>
   <% end %>

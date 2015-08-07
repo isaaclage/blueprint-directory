@@ -1,5 +1,6 @@
 <% provide(:title, "Home") %>
 
+<% if logged_in? %>
 <ul class = "categories">
   <% @categories.each do |category| %>
   <li>
@@ -17,5 +18,8 @@
   </li>
   <% end %>
 </ul>
-
-<%= link_to "Sign Up", 'users/new' %>
+<% else %>
+<div class="signup-button">
+  <%= link_to "Sign Up", 'users/new' %>
+</div>
+<% end %>

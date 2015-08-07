@@ -1,6 +1,10 @@
 <% provide(:title, @category_name) %>
 <br />
-<h3><%= @category_name %></h3>
+<tr class="bottom">
+<td>
+<%= link_to @category_name, resources_path(:category => @category_id) %>
+</td>
+</tr>
 <table id="container">
 <tr class="top">
 <td>
@@ -29,12 +33,6 @@
 </ol>
 <% end %>
 <br />
-</td>
-</tr>
-
-<tr class="bottom">
-<td>
-<%= link_to "#{ @category_name } Resources", resources_path(:category => @category_id) %>
 </td>
 </tr>
 </table>
