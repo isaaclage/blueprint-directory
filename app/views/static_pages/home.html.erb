@@ -1,7 +1,8 @@
 <% provide(:title, "Home") %>
 
 <% if logged_in? %>
-<ul class = "categories">
+<div class="cat" %>
+<ul class="categories">
   <% @categories.each do |category| %>
   <li>
     <%= link_to resources_path(:category => category[1]) do %>
@@ -12,12 +13,22 @@
       <% end %>
       <div class = "new_resource_link">
       <%= link_to new_resource_path(:category => category[1]) do %>
-        <p>+</p>
+        <%= image_tag("plus.png") %>
 	<% end %>
 	</div>
   </li>
   <% end %>
 </ul>
+</div>
+<div class="newsfeed">
+  <div class="inner">
+  <p>LEGAL: <span class="highlight">Adam Dinow at Wilson, Sonsini, Goodrich and Rosoti</span> was reviewed by <span class="highlight">Gil Addo from RubiconMD</span></p>
+  <p>ACCOUNTING: <span class="higlight">Joshua Azran at Azran Financials</span> was reviewed by <span class="highlight">Samir Malik from iMedicare</span></p>
+  <p>UI AND UX DESIGN: <span class="highlight">Elia Kanaki at Rossul</span> was reviewed by <span class="highlight">Matthew Loper from Wellth</span></p>
+  <p>MARKETING: <span class="highlight">Jacob Broude at Saotchi and Saotchi Wellness</span> was reviewed by <span class="highlight">Tiger</span></p>
+  </div>
+</div>
+
 <% else %>
 <div class="signup-button">
   <%= link_to "Sign Up", 'users/new' %>
