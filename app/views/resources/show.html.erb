@@ -1,10 +1,7 @@
 <% provide(:title, @category_name) %>
-<br />
-<tr class="bottom">
-<td>
-<%= link_to @category_name, resources_path(:category => @category_id) %>
-</td>
-</tr>
+<div class="category_names">
+  <%= link_to @category_name, resources_path(:category => @category_id) %>
+</div>
 <table id="container">
 <tr class="top">
 <td>
@@ -15,7 +12,6 @@
 <li>Location:  <%= @resource.location %></li>
 <li>Company:  <%= @resource.company %></li>
 <li>Website:  <%= @resource.website %></li>
-<li>Created by:  <%= @resource.user %>
 </ul>
 </td>
 
@@ -25,9 +21,16 @@
 </tr>
 
 <tr class="bottom">
+  <% if @resource.comments.any? %>
+  <td>
+    <h4>Comments (<%= @num_comments %>)</h4>
+ </td>
+  <td>
+    <h4>Average Rating: <%= @resource.average_rating %></h4>
+  </td>
+</tr>
+<tr>
 <td>
-<% if @resource.comments.any? %>
-<h4>Comments (<%= @resource.comments.count %>)</h4>
 <ol>
 <%= render @comments %>
 </ol>

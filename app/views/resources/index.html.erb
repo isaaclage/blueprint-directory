@@ -1,19 +1,24 @@
 <% provide(:title, @category_name) %>
 
-<br />
-<%= link_to @category_name, resources_path(:category => @category_id) %>
-<br />
+<div class="category_names">
+  <%= link_to @category_name, resources_path(:category => @category_id) %>
+</div>
+
+<table>
+  <tr>
+    <% @resources.each do |resource| %>
+    <td class="space"><%= link_to resource.name, resource %></td>
+    <td class="space"><%= resource.email %></td>
+    <td class="space">Average Rating: <%= resource.average_rating %></td>
+  </tr>
+  <% end %>
+</table>
+
 
 <br />
-<% @resources.each do |resource| %>
-<%= link_to resource.name, resource %>
-<%= resource.email %>
-<br />
 
+<%= link_to new_resource_path(:category => @category_id) do %>
+<%= image_tag("plus.png", height: 30, width: 30) %>Create a New <%= @category_name %> Resource
 <% end %>
-
-<br />
-
-<%= link_to "+ Create a New #{ @category_name } Resource", new_resource_path(:category => @category_id) %>
 
 

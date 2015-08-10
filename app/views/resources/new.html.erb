@@ -1,17 +1,18 @@
 <% provide(:title, @category_name) %>
 
-<h1>Add <%= @category_name %> resource</h1>
-
+<div class="category_names">
+  <%= link_to @category_name, resources_path(:category => @category_id) %>
+</div>
 
 <div class="left-align">
   <%= form_for @resource, url: { action: "create" } do |f| %>
-  <%= f.label :name %>
+  <%= f.label "Name*" %>
   <div class="form-field">
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :required => true %>
   </div>
-  <%= f.label :email %>
+  <%= f.label "Email*" %>
   <div class="form-field">
-    <%= f.email_field :email %>
+    <%= f.email_field :email, :required => true %>
   </div>
   <%= f.label :position %>
   <div class="form-field">
@@ -27,7 +28,7 @@
   </div>
   <%= f.label :website %>
   <div class="form-field">
-  <%= f.url_field :website %>
+  <%= f.text_field :website %>
   </div>
 
 

@@ -4,6 +4,7 @@ class ResourcesController < ApplicationController
     @category_id = @resource.category_id
     @category_name = Resource.names.key(@category_id)
     @comments = @resource.comments.all
+    @num_comments = @resource.comments.count
   end
   
   def index
