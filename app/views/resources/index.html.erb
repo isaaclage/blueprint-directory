@@ -4,11 +4,11 @@
   <%= link_to @category_name, resources_path(:category => @category_id) %>
 </div>
 
-<table>
-  <tr>
+<table width='100%'>
+  <tr class="bottom-border">
     <% @resources.each do |resource| %>
-    <td class="space"><%= link_to resource.name, resource %></td>
-    <td class="space"><%= resource.email %></td>
+    <td class="space" width="10%"><%= link_to resource.name, resource %></td>
+    <td class="space" width="40%"><%= resource.email %></td>
     <td class="space">Average Rating: <%= resource.average_rating %></td>
   </tr>
   <% end %>
