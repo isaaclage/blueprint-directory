@@ -13,7 +13,7 @@ body {
 
 .navbar {
 /*  border-bottom: thick solid #000000; */
-  background: #ffffff;
+  background: #FFFFFF;
   z-index: 10;
 }
 
@@ -22,9 +22,10 @@ body {
 }
 
 .navbar-right {
-  margin-right: 100px;
-  margin-top: 35px;
-  font-size: 24px;
+  margin-right: 125px;
+  margin-top: 45px;
+  font-size: 18px;
+  color: dimGray
 }
 
 /* Category List */
@@ -41,11 +42,17 @@ body {
     }
 
 .cat {
+  margin-top: 20px;
   margin-left: -75px;
   width: 1000px;
   display: inline-block;
   }
 
+.link {
+  a:hover {
+  text-decoration: none;
+  }
+  }
 
 .big_circle {
     margin-top: 50px;
@@ -67,6 +74,7 @@ body {
 	text-align: center;
       }
     }
+    
 
 .new_resource_link {
     margin-top: -40px;
@@ -86,15 +94,20 @@ body {
   margin-top: 50px;
   display: inline-block;
   width: 200px;
-  border: thick solid black;
+  border: solid #5f99d0;
+  border-width: 2px;
+  background-color: #EEEEEE;
   .inner {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 160px;
+    .underline {
+      border-bottom: 2px solid black;
+      }
     span {
-      color: SkyBlue;
+      color: dimGray;
     }
   }
 }

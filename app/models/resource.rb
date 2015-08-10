@@ -12,9 +12,9 @@ class Resource < ActiveRecord::Base
 
   def average_rating
     if self.comments.size > 0
-        self.comments.average(:rating).round(1)
+       self.comments.average(:rating).round(1)
     else
-        'undefined'
+       'undefined'
     end
   end
 end

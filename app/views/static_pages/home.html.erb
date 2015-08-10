@@ -5,27 +5,33 @@
 <ul class="categories">
   <% @categories.each do |category| %>
   <li>
+    <div class="link">
     <%= link_to resources_path(:category => category[1]) do %>
       <div class = "big_circle">
-	  <%= image_tag("#{ category[0] }.png") %>
-	  <p><%= category[0] %></p>
+        <%= image_tag("#{ category[0] }.png") %>
+	<p><%= category[0] %></p>
+      </div>
       </div>
       <% end %>
       <div class = "new_resource_link">
       <%= link_to new_resource_path(:category => category[1]) do %>
         <%= image_tag("plus.png") %>
 	<% end %>
-	</div>
+      </div>
   </li>
   <% end %>
 </ul>
 </div>
 <div class="newsfeed">
   <div class="inner">
-  <p>LEGAL: <span class="highlight">Adam Dinow at Wilson, Sonsini, Goodrich and Rosoti</span> was reviewed by <span class="highlight">Gil Addo from RubiconMD</span></p>
-  <p>ACCOUNTING: <span class="higlight">Joshua Azran at Azran Financials</span> was reviewed by <span class="highlight">Samir Malik from iMedicare</span></p>
-  <p>UI AND UX DESIGN: <span class="highlight">Elia Kanaki at Rossul</span> was reviewed by <span class="highlight">Matthew Loper from Wellth</span></p>
-  <p>MARKETING: <span class="highlight">Jacob Broude at Saotchi and Saotchi Wellness</span> was reviewed by <span class="highlight">Tiger</span></p>
+    <p class="underline">Legal</p>
+    <p><span class="highlight">Adam Dinow at Wilson, Sonsini, Goodrich and Rosoti</span> was reviewed by <span class="highlight">Gil Addo from RubiconMD</span></p>
+    <p class="underline">Accounting</p>
+    <p><span class="higlight">Joshua Azran at Azran Financials</span> was reviewed by <span class="highlight">Samir Malik from iMedicare</span></p>
+    <p class="underline">UI and UX Design</p>
+    <p><span class="highlight">Elia Kanaki at Rossul</span> was reviewed by <span class="highlight">Matthew Loper from Wellth</span></p>
+    <p class="underline">Marketing</p>
+    <p><span class="highlight">Jacob Broude at Saotchi</span></p>
   </div>
 </div>
 
