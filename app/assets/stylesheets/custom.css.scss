@@ -191,13 +191,13 @@ body {
 .homepage {
  position: fixed;
  overflow: hidden;
-/* margin-top: -130px; */
- margin-left: -75px;
- height: 120vh;
+ margin-top: 50px;
+ margin-left: 150px;
  width: 100vw;
- background: image-url("homepage.svg");
+ height: 110vh;
+ background: image-url("homepage.png");
  background-repeat: no-repeat;
- background-size: 93%;
+ background-size: 65%;
  }
 
 /* Index Pages */
