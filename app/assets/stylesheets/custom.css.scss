@@ -18,15 +18,13 @@ body {
 }
 
 .navbar-left {
+  margin-left: -15px;
   margin-top: 20px;
 }
 
 .navbar-right {
-  div {
-    color: white !important;
-    }
-  margin-right: 125px;
-  margin-top: 45px;
+  margin-right: 75px;
+  margin-top: 35px;
   font-size: 18px;
   color: dimGray;
 }
@@ -136,7 +134,7 @@ body {
     width: 15%;
     }
   .align-bottom {
-    vertical-align: bottom;
+    vertical-align: middle;
     font-size: 14px;
     }
   .top {
@@ -168,12 +166,6 @@ body {
   .comment {
     margin-top: 5px;
     }
-  }
-
-/* Users */
-
-.padding{
-  margin-top: 50px;
   }
 
 /* signup call to action */
@@ -246,6 +238,6 @@ body {
 /* User Profile */
 
 .user {
-  margin-top: 40px;
+  margin-top: 50px;
   font-size: 14px;
   }
