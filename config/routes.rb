@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get  'static_pages/help'
   get  'static_pages/about'
-  get  'users/user_id'
   get    'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
