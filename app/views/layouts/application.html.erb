@@ -11,7 +11,16 @@
     <div class="container">
       <%= link_to image_tag("bp_logo.png", alt: "Blueprint Health logo"), root_url, class: "navbar-left" %>
       <% if logged_in? %>
-      <%= link_to current_user.name, current_user, class: " navbar-right" %>
+      <div class="dropdown navbar-right">
+	<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	   <%= current_user.name %>
+	   <span class="caret"></span>
+	 </button>
+	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+	   <li><%= link_to "Profile", current_user %></li>
+	   <li><%= link_to "Log out", logout_path, method: :delete %></li>
+	   </ul>
+	</div>
       <% else %>
       <%= link_to " Login ", login_path, class: "navbar-right" %>
       <span class="navbar-right">|</span>

@@ -1,29 +1,30 @@
-<% provide(:title, 'Sign up') %>
+<% provide(:title, 'Sign Up') %>
 
-<div class="padding">
+<div class="signin">
+<div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
-    
-    <%= f.label :name %>
-    <div>
-      <%= f.text_field :name %>
+
+    <div class="form-field">
+      <%= f.label :name,  "Full Name*" %>
+      <%= f.text_field :name, :required => true,  class: 'form-control' %>
     </div>
 
-    <%= f.label :email %>
-    <div>
-      <%= f.email_field :email %>
+    <div class="form-field">
+      <%= f.label :email, "Email*" %>
+      <%= f.email_field :email, :required => true,  class: 'form-control'  %>
     </div>
 
-    <%= f.label :password %>
-    <div>
-      <%= f.password_field :password %>
+    <div class="form-field">
+      <%= f.label :password, "Password*" %>
+      <%= f.password_field :password, :required => true,  class: 'form-control'  %>
     </div>
 
-    <%= f.label :password_confirmation, "Confirmation" %>
-    <div>
-      <%= f.password_field :password_confirmation %>
+     <div class="form-field">
+       <%= f.label :password_confirmation,  "Password Confirmation*" %>
+       <%= f.password_field :password_confirmation, :required => true,  class: 'form-control'  %>
     </div>
-    <br />
 
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <%= f.submit "Create My Account", class: "btn btn-primary" %>
     <% end %>
+</div>
 </div>

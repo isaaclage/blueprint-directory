@@ -8,15 +8,15 @@
   <%= form_for @resource, url: { action: "create" } do |f| %>
   <div class="pull-left">
   <div class="form-field">
-    <%= f.label "Name*" %>
+    <%= f.label :name, "Name*" %>
     <%= f.text_field :name, :required => true,  class: 'form-control' %>
   </div>
   <div class="form-field">
-  <%= f.label "Position*" %>
+  <%= f.label :position, "Position*" %>
   <%= f.text_field :position,  :required => true,  class: 'form-control' %>
   </div>
   <div class="form-field">
-    <%= f.label "Email*" %>
+    <%= f.label :email, "Email*" %>
     <%= f.email_field :email, :required => true,  class: 'form-control' %>
   </div>
   </div>

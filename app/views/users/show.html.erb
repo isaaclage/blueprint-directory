@@ -1,7 +1,6 @@
-<br />
-<br />
-<%= @user.name %>, <%= @user.email %>
-
-<br />
-
-<%= link_to "Logout", logout_path %> 
+<% provide(:title, 'Profile') %>
+<div class="user">
+  <p><strong>Name: </strong><%= @user.name %><p>
+  <p><strong>Email: </strong><%= @user.email %></p>
+  <p><%= link_to "Log out", logout_path, method: :delete %></p>
+</div>

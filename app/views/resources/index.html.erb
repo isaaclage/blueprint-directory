@@ -13,8 +13,8 @@
 <table width='100%'>
     <% @resources.each do |resource| %>
     <tr class="bottom-border">
-    <td class="space" width="20%"><%= link_to resource.name, resource %></td>
-    <td class="space" width="30%"><%= resource.email %></td>
+    <td class="space" width="25%"><%= link_to resource.name, resource %></td>
+    <td class="space" width="25%"><%= resource.email %></td>
     <td class="space">
     <% if resource.average_rating != "undefined" %>
     Average Rating: <%= resource.average_rating %> stars
