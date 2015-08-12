@@ -13,7 +13,7 @@ body {
 
 .navbar {
 /*  border-bottom: thick solid #000000; */
-  background: #FFFFFF;
+  background-color: #ffffff;
   z-index: 10;
 }
 
@@ -126,12 +126,13 @@ body {
 /* Show resource */
 
 #container {
+  padding: 0px;
   table-layout: fixed;
   height: 80vh;
   margin-top: -10px;
   width: 85%;
   .photo {
-    width: 15%;
+    width: 17%;
     }
   .align-bottom {
     vertical-align: middle;
@@ -188,13 +189,15 @@ body {
 /* Homepage Background */
 
 .homepage {
- position: absolute;
- margin-left: -70px;
- height: 90vh;
+ position: fixed;
+ overflow: hidden;
+ margin-top: -140px;
+ margin-left: -75px;
+ height: 120vh;
  width: 100vw;
  background-image: url("homepage.svg");
  background-repeat: no-repeat;
- background-size: 100%;
+ background-size: 93%;
  }
 
 /* Index Pages */
