@@ -1,11 +1,5 @@
+<div class="comment-form">
 <%= form_for([@resource, @resource.comments.build]) do |f| %>
-<%= f.label :Comment %>
-  <div>
-    <%= f.text_field :content, :style => "width:400px" , placeholder: "Add your comment here..." %>
-    </div>
-  <br />
-  
-
   <div>
    <%= f.label :Rating %>
    <%= radio_button :comment, :rating, 1 %>
@@ -14,8 +8,15 @@
    <%= radio_button :comment, :rating, 4 %>
    <%= radio_button :comment, :rating, 5 %>
   </div>
-
-  <%= f.hidden_field :user_id, :value => current_user.id %>
   
-  <%= f.submit "Comment" %>
+  <div>
+    <%= f.text_field :content, placeholder: "Add your comment here...",  class: 'form-control' %>
+    </div>
+  
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+
+  <div class="comment">
+    <%= f.submit "Comment" %>
+  </div>
   <% end %>
+</div>

@@ -1,21 +1,32 @@
 <% provide(:title, @category_name) %>
+<div class="show-category">
 <div class="category_names">
   <%= link_to @category_name, resources_path(:category => @category_id) %>
 </div>
 <table id="container">
-<tr class="top">
-<td>
+  <tr class="top">
+    <td class="photo">
+      <%= image_tag("placeholder-image.jpg") %>
+    </td>
+    
+<td class="align-bottom" width="40%">
 <ul>
-<li>Name:  <%= @resource.name %></li>
-<li>Email:  <%= @resource.email %></li>
-<li>Position:  <%= @resource.position %></li>
-<li>Location:  <%= @resource.location %></li>
-<li>Company:  <%= @resource.company %></li>
-<li>Website:  <%= @resource.website %></li>
-</ul>
-</td>
+  <li><strong>Name:</strong>  <%= @resource.name %></li>
+  <li><strong>Position:</strong>  <%= @resource.position %></li>
+  <li><strong>Email:</strong>  <%= @resource.email %></li>
+  </ul>
+  </td>
+<td class="align-bottom">
+  <ul>
+  <li><strong>Location:</strong>  <%= @resource.location %></li>
+  <li><strong>Company:</strong>  <%= @resource.company %></li>
+  <li><strong>Website:</strong>  <%= @resource.website %></li>
+  </ul>
+  </td>
+</tr>
 
-<td colspan="2">
+<tr>
+<td colspan="3">
 <%= render "shared/comment_form" %>
 </td>
 </tr>
@@ -29,15 +40,15 @@
     <h4>Average Rating: <%= @resource.average_rating %></h4>
   </td>
 </tr>
-<tr>
+<tr class="scroll-box">
 <td colspan="3">
 <ol>
 <%= render @comments %>
 </ol>
 <% end %>
-<br />
 </td>
 </tr>
 </table>
+</div>
 
 

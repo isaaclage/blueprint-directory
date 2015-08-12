@@ -1,9 +1,9 @@
  <li id="comment-<%= comment.id %>">
    <!-- <%= link_to comment.resource.name, comment.resource %> -->
-  <%= comment.content %>
-  <br />
-  Rating: <%= comment.rating %> stars
-  <br />
+   <%= comment.content %>
+   <br />
+   Rating: <%= comment.rating %> stars
+   <br />
   <% @user = comment.user %>
   User: <%= @user.name %>
 </li>

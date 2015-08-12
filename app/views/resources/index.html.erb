@@ -4,6 +4,12 @@
   <%= link_to @category_name, resources_path(:category => @category_id) %>
 </div>
 
+<div class="resource-link pull-right">
+<%= link_to new_resource_path(:category => @category_id) do %>
+<%= image_tag("plus.png", size:"20") %>Create a New <%= @category_name %> Resource
+<% end %>
+</div>
+
 <table width='100%'>
     <% @resources.each do |resource| %>
     <tr class="bottom-border">
@@ -21,10 +27,5 @@
 </table>
 
 
-<br />
-
-<%= link_to new_resource_path(:category => @category_id) do %>
-<%= image_tag("plus.png") %>Create a New <%= @category_name %> Resource
-<% end %>
 
 

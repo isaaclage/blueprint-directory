@@ -4,31 +4,35 @@
   <%= link_to @category_name, resources_path(:category => @category_id) %>
 </div>
 
-<div class="left-align">
+<div class="resource-info">
   <%= form_for @resource, url: { action: "create" } do |f| %>
-  <%= f.label "Name*" %>
+  <div class="pull-left">
   <div class="form-field">
-    <%= f.text_field :name, :required => true %>
+    <%= f.label "Name*" %>
+    <%= f.text_field :name, :required => true,  class: 'form-control' %>
   </div>
-  <%= f.label "Email*" %>
   <div class="form-field">
-    <%= f.email_field :email, :required => true %>
+  <%= f.label "Position*" %>
+  <%= f.text_field :position,  :required => true,  class: 'form-control' %>
   </div>
-  <%= f.label :position %>
   <div class="form-field">
-  <%= f.text_field :position %>
+    <%= f.label "Email*" %>
+    <%= f.email_field :email, :required => true,  class: 'form-control' %>
   </div>
+  </div>
+  <div class="right">
+   <div class="form-field">
   <%= f.label :location %>
+  <%= f.text_field :location,  class: 'form-control' %>
+   </div>
   <div class="form-field">
-  <%= f.text_field :location %>
-  </div>
   <%= f.label :company %>
-  <div class="form-field">
-  <%= f.text_field :company %>
+  <%= f.text_field :company,  class: 'form-control' %>
   </div>
-  <%= f.label :website %>
   <div class="form-field">
-  <%= f.text_field :website %>
+  <%= f.label :website %>
+  <%= f.text_field :website,  class: 'form-control' %>
+  </div>
   </div>
 
 

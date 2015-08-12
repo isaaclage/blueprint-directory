@@ -13,7 +13,9 @@
       <% if logged_in? %>
       <%= link_to current_user.name, current_user, class: " navbar-right" %>
       <% else %>
-      <%= link_to "Login", login_path, class: "navbar-right" %>
+      <%= link_to " Login ", login_path, class: "navbar-right" %>
+      <span class="navbar-right">|</span>
+      <%= link_to " Sign Up ", 'users/new', class: "navbar-right" %>
       <% end %>
     </div>
   </header>
