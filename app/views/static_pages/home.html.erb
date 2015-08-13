@@ -33,10 +33,10 @@
     <% @resource = Resource.find_by(id: comment.resource_id) %>
     <% @category = @resource.category_id %>
     <div class="underline"><strong><%= Resource.names.key(@category) %></strong></div>
-    <br />
     <%= link_to @resource.name, @resource %> was reviewed by <%= comment.user.name %>
     <br />
     <%= comment.updated_at.to_date %>
+    <br />
     <% end %>
     
     <!--<p class="underline">Legal</p>
