@@ -12,7 +12,7 @@ class Resource < ActiveRecord::Base
   validates :email, presence: true
 
   def average_rating
-    if self.comments.size > 0
+    if self.comments.size > 1
        self.comments.average(:rating).round(1)
     else
        'undefined'
