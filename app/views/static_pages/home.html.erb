@@ -1,3 +1,4 @@
+
 <% provide(:title, "Home") %>
 
 <% if logged_in? %>
@@ -22,16 +23,30 @@
   <% end %>
 </ul>
 </div>
+
+
+
+
 <div class="newsfeed">
   <div class="inner">
-    <p class="underline">Legal</p>
+    <% @comments.each do |comment| %>
+    <% @resource = Resource.find_by(id: comment.resource_id) %>
+    <% @category = @resource.category_id %>
+    <div class="underline"><strong><%= Resource.names.key(@category) %></strong></div>
+    <br />
+    <%= link_to @resource.name, @resource %> was reviewed by <%= comment.user.name %>
+    <br />
+    <%= comment.updated_at.to_date %>
+    <% end %>
+    
+    <!--<p class="underline">Legal</p>
     <p><span class="highlight">Adam Dinow at Wilson, Sonsini, Goodrich and Rosoti</span> was reviewed by <span class="highlight">Gil Addo from RubiconMD</span></p>
     <p class="underline">Accounting</p>
     <p><span class="higlight">Joshua Azran at Azran Financials</span> was reviewed by <span class="highlight">Samir Malik from iMedicare</span></p>
     <p class="underline">UI and UX Design</p>
     <p><span class="highlight">Elia Kanaki at Rossul</span> was reviewed by <span class="highlight">Matthew Loper from Wellth</span></p>
     <p class="underline">Marketing</p>
-    <p><span class="highlight">Jacob Broude at Saotchi</span></p>
+    <p><span class="highlight">Jacob Broude at Saotchi</span></p>-->
   </div>
 </div>
 

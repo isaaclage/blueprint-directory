@@ -3,4 +3,21 @@
   <p><strong>Name: </strong><%= @user.name %><p>
   <p><strong>Email: </strong><%= @user.email %></p>
   <p><%= link_to "Log out", logout_path, method: :delete %></p>
-</div>
+
+  <div class="user-comments">
+  <ul>
+  <% @comments.each do |comment| %>
+  <li class="underline">
+    <% @resource = Resource.find_by(id: comment.resource_id) %>
+    <% @category = @resource.category_id %>
+    <div>
+    <%= Resource.names.key(@category) %>,  <%= link_to @resource.name, @resource %>
+    </div>
+    <div><%= comment.content %></div>
+    <div>Rating: <%= comment.rating %> stars</div>
+    </li>
+  <% end %>
+  </ul>
+  </div>
+  </div>
+
