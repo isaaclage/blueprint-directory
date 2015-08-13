@@ -13,7 +13,7 @@
 <table width='100%'>
     <% @resources.each do |resource| %>
     <tr class="bottom-border">
-    <td class="space" width="25%"><%= link_to resource.name, resource, method: :get %></td>
+    <td class="space" width="25%"><%= link_to resource.name, resource, method: :post %></td>
     <td class="space" width="25%"><%= resource.email %></td>
     <td class="space">
     <% if resource.average_rating != "undefined" %>
