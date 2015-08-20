@@ -2,13 +2,14 @@
 <% provide(:title, "Home") %>
 
 <% if logged_in? %>
-<div class="cat" %>
+<div class="cat">
 <ul class="categories">
   <% @categories.each do |category| %>
   <li>
     <div class="link">
-    <%= link_to resources_path(:category => category[1]) do %>
-      <div class = "big_circle">
+      <%= link_to resources_path(:category => category[1]) do %>
+       <%= image_tag("hexagon.png", class: "float") %>
+    <div class = "big_circle">
         <%= image_tag("#{ category[0] }.png") %>
 	<p><%= category[0] %></p>
       </div>
@@ -18,9 +19,9 @@
       <%= link_to new_resource_path(:category => category[1]) do %>
         <%= image_tag("plus.png") %>
 	<% end %>
+	<% end %>
       </div>
   </li>
-  <% end %>
 </ul>
 </div>
 
@@ -53,8 +54,8 @@
 
 <% else %>
 <div class="homepage">
-<!--<div class="signup-button">
-  <%= link_to "Sign Up", 'users/new' %>
-</div>-->
+<div class="signup-button">
+  <%= link_to "Get Started!", 'users/new' %>
+</div>
 </div>
 <% end %>
