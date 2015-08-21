@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150805162253) do
+ActiveRecord::Schema.define(version: 20150821170201) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20150805162253) do
     t.string   "company"
     t.string   "website"
     t.integer  "category_id"
+    t.string   "photo"
   end
 
   add_index "resources", ["email"], name: "index_resources_on_email", unique: true

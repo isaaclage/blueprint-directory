@@ -6,21 +6,23 @@
 <ul class="categories">
   <% @categories.each do |category| %>
   <li>
-    <div class="link">
-      <%= link_to resources_path(:category => category[1]) do %>
-       <%= image_tag("hexagon.png", class: "float") %>
-    <div class = "big_circle">
-        <%= image_tag("#{ category[0] }.png") %>
-	<p><%= category[0] %></p>
+    <div class="hexagon">
+      <div class="link">
+	<%= link_to resources_path(:category => category[1]) do %>
+	    <%= image_tag("hexagon.png", class: "hex") %>
+	    <%= image_tag("#{ category[0] }.png", class: "category-pix") %>
+	    <div class="text">
+	      <p><%= category[0] %></p>
+	      </div>
       </div>
-      </div>
-      <% end %>
-      <div class = "new_resource_link">
+    <div class = "new_resource_link">
       <%= link_to new_resource_path(:category => category[1]) do %>
-        <%= image_tag("plus.png") %>
+      <%= image_tag("plus.png", class: "plus") %>
+      <% end %>
+    </div>
+    	<% end %>
 	<% end %>
-	<% end %>
-      </div>
+    </div>
   </li>
 </ul>
 </div>

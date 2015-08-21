@@ -31,7 +31,7 @@ class ResourcesController < ApplicationController
   private
 
     def resource_params
-      params.require(:resource).permit(:name, :email, :position, :location, :company, :website, :category_id)
+      params.require(:resource).permit(:name, :email, :position, :location, :company, :website, :category_id, :photo)
     end
      
 end

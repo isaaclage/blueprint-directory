@@ -33,14 +33,17 @@
   <%= f.label :website %>
   <%= f.text_field :website,  class: 'form-control' %>
   </div>
+  <div class="form-field">
+    <%= f.label :image_link %>
+    <%= f.text_field :photo, class: 'form-control' %>
+  </div>
   </div>
 
 
   <%= f.hidden_field :category_id, :value => @category_id %>
   <!-- Submits correct category with form -->
 
-  <div>
-    <br />
+  <div class="pull-left submit">
     <%= f.submit "Create #{ @category_name } resource" %>
   </div>
   <% end %>
