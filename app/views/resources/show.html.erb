@@ -7,7 +7,7 @@
   <tr class="top">
     <td class="photo">
       <% if @resource.name = "Adam Dinow" %>
-      %= image_tag("https://media.licdn.com/media/p/3/000/11d/263/180f6a7.jpg") %>
+     <%= image_tag("https://media.licdn.com/media/p/3/000/11d/263/180f6a7.jpg") %>
       <% elsif @resource.photo != nil %>
       <%= image_tag(@resource.photo) %>
 	  <% else %>
