@@ -1,0 +1,60 @@
+<% provide(:title, @category_name) %>
+<div class="show-category">
+<div class="category_names">
+  <%= link_to @category_name, resources_path(:category => @category_id) %>
+</div>
+<table id="container">
+  <tr class="top">
+    <td class="photo">
+      <% if @resource.name = "Adam Dinow" %>
+     <%= image_tag("https://media.licdn.com/media/p/3/000/11d/263/180f6a7.jpg") %>
+      <% elsif @resource.photo != nil %>
+      <%= image_tag(@resource.photo) %>
+	  <% else %>
+	  <%= image_tag("placeholder-image.jpg") %>
+	  <% end %>
+    </td>
+    
+<td class="align-bottom" width="27%">
+<ul>
+  <li><strong>Name:</strong>  <%= @resource.name %></li>
+  <li><strong>Position:</strong>  <%= @resource.position %></li>
+  <li><strong>Email:</strong>  <%= @resource.email %></li>
+  </ul>
+  </td>
+<td class="align-bottom">
+  <ul>
+  <li><strong>Location:</strong>  <%= @resource.location %></li>
+  <li><strong>Company:</strong>  <%= @resource.company %></li>
+  <li><strong>Website:</strong>  <%= @resource.website %></li>
+  </ul>
+  </td>
+</tr>
+
+<tr>
+<td colspan="3">
+<%= render "shared/comment_form" %>
+</td>
+</tr>
+
+<tr class="bottom">
+  <% if @resource.comments.any? %>
+  <td>
+    <h4>Comments (<%= @num_comments %>)</h4>
+ </td>
+  <td>
+    <h4>Average Rating: <%= @resource.average_rating %></h4>
+  </td>
+</tr>
+<tr class="scroll-box">
+<td colspan="3">
+<ol>
+<%= render @comments %>
+</ol>
+<% end %>
+</td>
+</tr>
+</table>
+</div>
+
+
