@@ -6,7 +6,13 @@
 <table id="container">
   <tr class="top">
     <td class="photo">
-      <%= image_tag("placeholder-image.jpg") %>
+      <% if @resource.name = "Adam Dinow" %>
+      %= image_tag("https://media.licdn.com/media/p/3/000/11d/263/180f6a7.jpg") %>
+      <% elsif @resource.photo != nil %>
+      <%= image_tag(@resource.photo) %>
+	  <% else %>
+	  <%= image_tag("placeholder-image.jpg") %>
+	  <% end %>
     </td>
     
 <td class="align-bottom" width="27%">
