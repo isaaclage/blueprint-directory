@@ -142,6 +142,9 @@ body {
   .photo {
     width: 17%;
     padding-top: 15px;
+    img {
+      max-width: 125px;
+      }
     }
   .align-bottom {
     vertical-align: middle;
